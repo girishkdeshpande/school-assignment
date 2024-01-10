@@ -106,7 +106,7 @@ class StudentDetail(APIView):
     # Soft delete student
     def patch(self, request, pk):
         try:
-            student = Student.objects,get(pk=pk)
+            student = Student.objects.get(pk=pk)
             student.student_status = False
             student.save()
             return Response({'Student': student}, status=status.HTTP_202_ACCEPTED)
@@ -130,7 +130,7 @@ class CourseList(APIView):
     def get(self, request):
         try:
             courses = Course.objects.all()
-            serializer = CourseSerializer(data=courses, many=True)
+            serializer = CourseSerializer(courses, many=True)
             return Response({'Courses': serializer.data}, status=status.HTTP_200_OK)
 
         except ObjectDoesNotExist:
@@ -220,6 +220,100 @@ class CourseDetail(APIView):
         except Exception as e:
             return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-# class TeacherViewSet(viewsets.ModelViewSet):
-#     queryset = Teacher.objects.all()
-#     serializer_class = TeacherSerializer
+
+# Teacher APIs
+class TeacherList(APIView):
+    # View all teachers
+    def get(self, request):
+        try:
+            teachers = Teacher.objects.all()
+            if teachers:
+                serializer = TeacherSerializer(teachers, many=True)
+                return Response({'Teachers': serializer.data}, status=status.HTTP_200_OK)
+
+            else:
+                return Response({'Error': 'No Records'}, status=status.HTTP_404_NOT_FOUND)
+
+        except Exception as e:
+            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    # New Teacher
+    def post(self, request):
+        try:
+            if special_str.search(request.data['teacher_name']):
+                return Response({'Error': "Name should have characters only"}, status=status.HTTP_406_NOT_ACCEPTABLE)
+
+            if not re.match(email_str, request.data['teacher_email']):
+                return Response({'Error': "Invalid email id"}, status=status.HTTP_406_NOT_ACCEPTABLE)
+
+            serializer = TeacherSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response({'Teacher': serializer.data}, status=status.HTTP_200_OK)
+
+            else:
+                return Response({'Error': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+
+        except Exception as e:
+            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class TeacherDetail(APIView):
+    # View teacher by id
+    def get(self, request, pk):
+        try:
+            teacher = Teacher.objects.get(pk=pk)
+            serializer = TeacherSerializer(teacher)
+            return Response({'Teacher': serializer.data}, status=status.HTTP_200_OK)
+
+        except ObjectDoesNotExist:
+            return Response({'Error': 'Record does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
+        except Exception as e:
+            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    # Update teacher
+    def put(self, request, pk):
+        try:
+            teacher = Teacher.objects.get(pk=pk)
+            serializer = TeacherSerializer(teacher, data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response({'Teacher': serializer.data, 'Message': 'Record updated'}, status=status.HTTP_202_ACCEPTED)
+
+            else:
+                return Response({'Error': serializer.errors}, status=status.HTTP_406_NOT_ACCEPTABLE)
+
+        except ObjectDoesNotExist:
+            return Response({'Error': 'Record does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
+        except Exception as e:
+            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    # Delete teacher
+    def delete(self, request, pk):
+        try:
+            teacher = Teacher.objects.get(pk=pk)
+            teacher.delete()
+            return Response({'Message': 'Record deleted'}, status=status.HTTP_204_NO_CONTENT)
+
+        except ObjectDoesNotExist:
+            return Response({'Error': 'Record does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
+        except Exception as e:
+            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    # Soft delete teacher
+    def patch(self, request, pk):
+        try:
+            teacher = Teacher.objects.get(pk=pk)
+            if teacher.teacher_status:
+                teacher.teacher_status = False
+                teacher.save()
+                return Response({'Message': 'Record deleted'}, status=status.HTTP_204_NO_CONTENT)
+
+        except ObjectDoesNotExist:
+            return Response({'Error': 'Record does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
+        except Exception as e:
+            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

@@ -25,4 +25,4 @@ class StudentPost(StudentSerializer):
 class TeacherSerializer(serializers.ModelSerializer):
     class Meta:
         model = Teacher
-        fields = ['id', 'teacher_name', 'teacher_status']
+        fields = ['id', 'teacher_name', 'teacher_email', 'teacher_status']

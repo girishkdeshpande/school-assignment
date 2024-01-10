@@ -1,4 +1,4 @@
-from django.utils import timezone
+from datetime import date
 
 from django.db import models
 
@@ -14,7 +14,7 @@ class Course(models.Model):
 class Student(models.Model):
     student_name = models.CharField(max_length=30, null=False)
     student_email = models.EmailField(unique=True, null=False)
-    enrolled_year = models.DateField(default=timezone.now)
+    enrolled_year = models.DateField(default=date.today)
     student_status = models.BooleanField(default=True)
     # courses = models.ManyToManyField(Course, related_name='student_courses')
 
