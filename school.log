@@ -1,0 +1,685 @@
+INFO 2024-01-07 01:50:37,454 autoreload 3476 13608 Watching for file changes with StatReloader
+INFO 2024-01-07 01:54:51,374 autoreload 3476 13608 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-07 01:54:52,544 autoreload 11204 9184 Watching for file changes with StatReloader
+ERROR 2024-01-07 01:55:01,318 log 11204 6672 Internal Server Error: /mbschool/students/
+ERROR 2024-01-07 01:55:01,319 basehttp 11204 6672 "GET /mbschool/students/ HTTP/1.1" 500 7180
+INFO 2024-01-07 01:56:26,140 autoreload 11204 9184 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-07 01:56:27,411 autoreload 3548 4352 Watching for file changes with StatReloader
+ERROR 2024-01-07 01:56:31,650 log 3548 9188 Internal Server Error: /mbschool/students/
+ERROR 2024-01-07 01:56:31,653 basehttp 3548 9188 "GET /mbschool/students/ HTTP/1.1" 500 7180
+INFO 2024-01-07 01:59:18,160 autoreload 3548 4352 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-07 01:59:19,423 autoreload 8160 4376 Watching for file changes with StatReloader
+ERROR 2024-01-07 01:59:39,509 log 8160 9956 Internal Server Error: /mbschool/students/
+ERROR 2024-01-07 01:59:39,511 basehttp 8160 9956 "GET /mbschool/students/ HTTP/1.1" 500 7180
+INFO 2024-01-07 02:06:16,210 autoreload 8160 4376 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-07 02:06:25,931 autoreload 13944 13224 Watching for file changes with StatReloader
+INFO 2024-01-07 02:06:30,590 basehttp 13944 3172 "GET /mbschool/courses/ HTTP/1.1" 200 7495
+INFO 2024-01-07 02:07:51,406 autoreload 13944 13224 G:\school_management\school\mbschool\serializer.py changed, reloading.
+INFO 2024-01-07 02:07:53,440 autoreload 12432 9292 Watching for file changes with StatReloader
+INFO 2024-01-07 02:09:57,220 autoreload 12432 9292 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-07 02:10:01,578 autoreload 12912 5956 Watching for file changes with StatReloader
+INFO 2024-01-07 02:16:30,948 autoreload 12912 5956 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-07 02:16:35,005 autoreload 4728 1764 Watching for file changes with StatReloader
+INFO 2024-01-07 02:17:48,365 autoreload 4728 1764 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-07 02:17:52,730 autoreload 6588 11688 Watching for file changes with StatReloader
+ERROR 2024-01-07 02:18:05,219 log 6588 11176 Internal Server Error: /mbschool/students/
+ERROR 2024-01-07 02:18:05,220 basehttp 6588 11176 "GET /mbschool/students/ HTTP/1.1" 500 7182
+ERROR 2024-01-07 02:18:06,151 log 6588 11176 Internal Server Error: /mbschool/students/
+ERROR 2024-01-07 02:18:06,154 basehttp 6588 11176 "GET /mbschool/students/ HTTP/1.1" 500 7182
+INFO 2024-01-07 02:38:54,467 basehttp 6588 1636 "GET /mbschool/students/1/ HTTP/1.1" 200 8699
+INFO 2024-01-07 02:38:55,413 basehttp 6588 1636 "GET /mbschool/students/14/ HTTP/1.1" 200 8746
+INFO 2024-01-07 03:15:57,830 autoreload 6588 11688 G:\school_management\school\school\settings.py changed, reloading.
+INFO 2024-01-07 03:18:40,569 autoreload 2620 11036 Watching for file changes with StatReloader
+ERROR 2024-01-07 03:18:47,422 log 2620 9496 Internal Server Error: /mbschool/students/
+ERROR 2024-01-07 03:18:47,424 basehttp 2620 9496 "GET /mbschool/students/ HTTP/1.1" 500 7182
+INFO 2024-01-08 11:42:43,095 autoreload 5192 11404 Watching for file changes with StatReloader
+INFO 2024-01-08 11:43:08,071 autoreload 5192 11404 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 11:43:09,433 autoreload 9608 7308 Watching for file changes with StatReloader
+INFO 2024-01-08 11:57:28,218 autoreload 9608 7308 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 11:57:47,836 autoreload 1484 9304 Watching for file changes with StatReloader
+INFO 2024-01-08 11:59:59,031 autoreload 1484 9304 G:\school_management\school\mbschool\urls.py changed, reloading.
+INFO 2024-01-08 12:00:00,420 autoreload 1900 1912 Watching for file changes with StatReloader
+INFO 2024-01-08 12:01:14,114 autoreload 1900 1912 G:\school_management\school\mbschool\urls.py changed, reloading.
+INFO 2024-01-08 12:01:16,614 autoreload 6332 5600 Watching for file changes with StatReloader
+INFO 2024-01-08 12:18:42,653 autoreload 6332 5600 G:\school_management\school\mbschool\urls.py changed, reloading.
+INFO 2024-01-08 12:18:47,633 autoreload 9596 8700 Watching for file changes with StatReloader
+INFO 2024-01-08 12:21:38,544 autoreload 1716 1504 Watching for file changes with StatReloader
+INFO 2024-01-08 12:23:26,598 autoreload 1716 1504 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 12:23:29,793 autoreload 7680 11900 Watching for file changes with StatReloader
+INFO 2024-01-08 12:24:24,421 autoreload 7680 11900 G:\school_management\school\mbschool\serializer.py changed, reloading.
+INFO 2024-01-08 12:24:25,604 autoreload 4944 9856 Watching for file changes with StatReloader
+INFO 2024-01-08 13:06:39,915 autoreload 14040 5600 Watching for file changes with StatReloader
+INFO 2024-01-08 13:08:39,940 autoreload 13916 10940 Watching for file changes with StatReloader
+INFO 2024-01-08 13:08:50,001 basehttp 13916 6420 "GET /mbschool/allstudent HTTP/1.1" 200 9031
+INFO 2024-01-08 13:08:50,075 basehttp 13916 6420 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2024-01-08 13:08:50,081 basehttp 13916 6420 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2024-01-08 13:08:50,082 basehttp 13916 6268 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2024-01-08 13:08:50,087 basehttp 13916 6420 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2024-01-08 13:08:50,091 basehttp 13916 6420 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2024-01-08 13:08:50,097 basehttp 13916 6268 "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 304 0
+INFO 2024-01-08 13:08:50,099 basehttp 13916 10388 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2024-01-08 13:08:50,108 basehttp 13916 11644 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2024-01-08 13:08:50,114 basehttp 13916 4076 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2024-01-08 13:08:50,121 basehttp 13916 4928 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2024-01-08 13:08:50,179 basehttp 13916 4928 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2024-01-08 13:08:52,076 basehttp 13916 4928 "GET /mbschool/allstudent HTTP/1.1" 200 9031
+ERROR 2024-01-08 13:09:24,907 log 13916 13336 Internal Server Error: /mbschool/singlestudent/1
+Traceback (most recent call last):
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SingleStudent.get() got an unexpected keyword argument 'id'
+ERROR 2024-01-08 13:09:24,923 basehttp 13916 13336 "GET /mbschool/singlestudent/1 HTTP/1.1" 500 87078
+INFO 2024-01-08 13:09:55,010 autoreload 13916 10940 G:\school_management\school\mbschool\urls.py changed, reloading.
+INFO 2024-01-08 13:09:56,844 autoreload 8464 11352 Watching for file changes with StatReloader
+INFO 2024-01-08 13:09:57,293 basehttp 8464 11188 "GET /mbschool/singlestudent/1 HTTP/1.1" 200 5667
+INFO 2024-01-08 13:13:15,887 autoreload 8464 11352 G:\school_management\school\mbschool\urls.py changed, reloading.
+INFO 2024-01-08 13:13:17,118 autoreload 9640 2744 Watching for file changes with StatReloader
+ERROR 2024-01-08 13:14:03,259 log 9640 3020 Internal Server Error: /mbschool/allcourse
+Traceback (most recent call last):
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AllCourse.get() takes 1 positional argument but 2 were given
+ERROR 2024-01-08 13:14:03,263 basehttp 9640 3020 "GET /mbschool/allcourse HTTP/1.1" 500 86784
+INFO 2024-01-08 13:14:46,407 autoreload 9640 2744 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 13:14:47,983 autoreload 8580 7260 Watching for file changes with StatReloader
+ERROR 2024-01-08 13:14:48,624 log 8580 1560 Internal Server Error: /mbschool/allcourse
+ERROR 2024-01-08 13:14:48,625 basehttp 8580 1560 "GET /mbschool/allcourse HTTP/1.1" 500 5386
+INFO 2024-01-08 13:16:40,167 autoreload 8580 7260 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 13:16:46,891 autoreload 2296 3620 Watching for file changes with StatReloader
+ERROR 2024-01-08 13:16:52,317 log 2296 5276 Internal Server Error: /mbschool/allcourse
+ERROR 2024-01-08 13:16:52,318 basehttp 2296 5276 "GET /mbschool/allcourse HTTP/1.1" 500 5386
+INFO 2024-01-08 13:20:42,185 autoreload 2296 3620 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 13:20:43,894 autoreload 10876 9212 Watching for file changes with StatReloader
+ERROR 2024-01-08 13:20:44,801 log 10876 7324 Internal Server Error: /mbschool/allcourse
+ERROR 2024-01-08 13:20:44,803 basehttp 10876 7324 "GET /mbschool/allcourse HTTP/1.1" 500 5386
+ERROR 2024-01-08 13:21:59,896 log 10876 3752 Internal Server Error: /mbschool/allteacher
+Traceback (most recent call last):
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AllTeacher.get() takes 1 positional argument but 2 were given
+ERROR 2024-01-08 13:21:59,899 basehttp 10876 3752 "GET /mbschool/allteacher HTTP/1.1" 500 86817
+INFO 2024-01-08 13:22:22,732 autoreload 10876 9212 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 13:22:24,621 autoreload 13176 11440 Watching for file changes with StatReloader
+INFO 2024-01-08 13:22:25,218 basehttp 13176 4272 "GET /mbschool/allteacher HTTP/1.1" 200 5560
+ERROR 2024-01-08 13:22:38,589 log 13176 12364 Internal Server Error: /mbschool/allcourse
+ERROR 2024-01-08 13:22:38,591 basehttp 13176 12364 "GET /mbschool/allcourse HTTP/1.1" 500 5386
+INFO 2024-01-08 13:26:15,945 autoreload 13176 11440 G:\school_management\school\mbschool\models.py changed, reloading.
+INFO 2024-01-08 13:26:17,879 autoreload 14308 9084 Watching for file changes with StatReloader
+INFO 2024-01-08 13:26:36,231 autoreload 14308 9084 G:\school_management\school\mbschool\models.py changed, reloading.
+INFO 2024-01-08 13:26:37,461 autoreload 14116 8612 Watching for file changes with StatReloader
+ERROR 2024-01-08 13:26:44,379 log 14116 8988 Internal Server Error: /mbschool/allcourse
+ERROR 2024-01-08 13:26:44,380 basehttp 14116 8988 "GET /mbschool/allcourse HTTP/1.1" 500 5386
+ERROR 2024-01-08 13:27:08,286 log 14116 1876 Internal Server Error: /mbschool/singlecourse/1
+Traceback (most recent call last):
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SingleCourse.get() got multiple values for argument 'pk'
+ERROR 2024-01-08 13:27:08,288 basehttp 14116 1876 "GET /mbschool/singlecourse/1 HTTP/1.1" 500 87033
+INFO 2024-01-08 13:27:39,717 autoreload 14116 8612 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 13:27:41,092 autoreload 13868 8296 Watching for file changes with StatReloader
+ERROR 2024-01-08 13:27:41,469 log 13868 3168 Internal Server Error: /mbschool/singlecourse/1
+ERROR 2024-01-08 13:27:41,470 basehttp 13868 3168 "GET /mbschool/singlecourse/1 HTTP/1.1" 500 5443
+INFO 2024-01-08 13:29:12,167 autoreload 13868 8296 G:\school_management\school\mbschool\serializer.py changed, reloading.
+INFO 2024-01-08 13:29:13,599 autoreload 10692 2592 Watching for file changes with StatReloader
+INFO 2024-01-08 13:29:14,584 basehttp 10692 6680 "GET /mbschool/singlecourse/1 HTTP/1.1" 200 5453
+INFO 2024-01-08 13:29:23,504 basehttp 10692 14208 "GET /mbschool/allcourse HTTP/1.1" 200 5737
+INFO 2024-01-08 13:30:29,020 autoreload 10692 2592 G:\school_management\school\mbschool\urls.py changed, reloading.
+INFO 2024-01-08 13:30:31,965 autoreload 12800 4040 Watching for file changes with StatReloader
+INFO 2024-01-08 14:00:36,696 autoreload 12800 4040 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 14:00:57,941 autoreload 11804 11916 Watching for file changes with StatReloader
+WARNING 2024-01-08 14:01:17,974 log 11804 2468 Method Not Allowed: /mbschool/newstudent
+WARNING 2024-01-08 14:01:17,975 basehttp 11804 2468 "GET /mbschool/newstudent HTTP/1.1" 405 5674
+INFO 2024-01-08 14:01:55,977 autoreload 11804 11916 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 14:02:11,156 autoreload 14144 10364 Watching for file changes with StatReloader
+WARNING 2024-01-08 14:02:18,213 log 14144 4472 Method Not Allowed: /mbschool/newstudent
+WARNING 2024-01-08 14:02:18,213 basehttp 14144 4472 "GET /mbschool/newstudent HTTP/1.1" 405 5674
+INFO 2024-01-08 14:02:49,954 basehttp 14144 11156 "GET /mbschool/allstudent HTTP/1.1" 200 9031
+WARNING 2024-01-08 14:03:12,649 log 14144 13988 Method Not Allowed: /mbschool/newstudent
+WARNING 2024-01-08 14:03:12,650 basehttp 14144 13988 "GET /mbschool/newstudent HTTP/1.1" 405 5674
+WARNING 2024-01-08 14:03:31,905 log 14144 5536 Not Acceptable: /mbschool/newstudent
+WARNING 2024-01-08 14:03:31,906 basehttp 14144 5536 "POST /mbschool/newstudent HTTP/1.1" 406 5648
+ERROR 2024-01-08 14:04:43,586 log 14144 8664 Internal Server Error: /mbschool/newstudent
+ERROR 2024-01-08 14:04:43,586 basehttp 14144 8664 "POST /mbschool/newstudent HTTP/1.1" 500 5773
+INFO 2024-01-08 14:12:23,955 autoreload 14144 10364 G:\school_management\school\mbschool\models.py changed, reloading.
+INFO 2024-01-08 14:12:27,946 autoreload 10952 13356 Watching for file changes with StatReloader
+INFO 2024-01-08 14:18:47,079 autoreload 10736 5248 Watching for file changes with StatReloader
+WARNING 2024-01-08 14:19:08,945 log 10736 12720 Not Found: /mbschool/singlestudent/23
+WARNING 2024-01-08 14:19:08,946 basehttp 10736 12720 "GET /mbschool/singlestudent/23 HTTP/1.1" 404 5383
+INFO 2024-01-08 14:22:50,388 autoreload 10736 5248 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 14:23:11,630 autoreload 3124 9768 Watching for file changes with StatReloader
+ERROR 2024-01-08 14:23:24,501 log 3124 3516 Internal Server Error: /mbschool/singlestudent/1
+ERROR 2024-01-08 14:23:24,502 basehttp 3124 3516 "GET /mbschool/singlestudent/1 HTTP/1.1" 500 5459
+INFO 2024-01-08 14:23:38,016 autoreload 3124 9768 G:\school_management\school\mbschool\serializer.py changed, reloading.
+INFO 2024-01-08 14:23:39,448 autoreload 12216 12972 Watching for file changes with StatReloader
+INFO 2024-01-08 14:23:40,329 basehttp 12216 5112 "GET /mbschool/singlestudent/1 HTTP/1.1" 200 5634
+INFO 2024-01-08 14:27:42,727 autoreload 12216 12972 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 14:27:45,324 autoreload 10952 5732 Watching for file changes with StatReloader
+INFO 2024-01-08 14:33:54,141 autoreload 10952 5732 G:\school_management\school\school\settings.py changed, reloading.
+INFO 2024-01-08 14:34:02,978 autoreload 7056 10496 Watching for file changes with StatReloader
+INFO 2024-01-08 14:35:19,387 autoreload 7056 10496 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 14:35:21,001 autoreload 6996 13872 Watching for file changes with StatReloader
+INFO 2024-01-08 14:36:10,137 autoreload 6996 13872 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 14:36:12,302 autoreload 4052 13344 Watching for file changes with StatReloader
+INFO 2024-01-08 14:41:25,296 autoreload 4052 13344 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 14:41:27,676 autoreload 9292 13068 Watching for file changes with StatReloader
+INFO 2024-01-08 14:51:51,664 autoreload 9292 13068 G:\school_management\school\mbschool\serializer.py changed, reloading.
+INFO 2024-01-08 14:51:54,804 autoreload 8572 5788 Watching for file changes with StatReloader
+INFO 2024-01-08 15:06:04,657 autoreload 8572 5788 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 15:06:09,163 autoreload 11188 5376 Watching for file changes with StatReloader
+INFO 2024-01-08 15:11:02,981 autoreload 11188 5376 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 15:11:04,102 autoreload 796 6704 Watching for file changes with StatReloader
+INFO 2024-01-08 15:11:12,997 basehttp 796 1972 "GET /mbschool/allcourse HTTP/1.1" 200 5737
+WARNING 2024-01-08 15:23:28,606 log 796 13892 Method Not Allowed: /mbschool/newstudent
+WARNING 2024-01-08 15:23:28,609 basehttp 796 13892 "GET /mbschool/newstudent HTTP/1.1" 405 5674
+INFO 2024-01-08 15:24:07,199 autoreload 796 6704 G:\school_management\school\mbschool\urls.py changed, reloading.
+INFO 2024-01-08 15:24:22,584 autoreload 6764 3220 Watching for file changes with StatReloader
+WARNING 2024-01-08 15:24:34,967 log 6764 13840 Method Not Allowed: /mbschool/newstudent/
+WARNING 2024-01-08 15:24:34,968 basehttp 6764 13840 "GET /mbschool/newstudent/ HTTP/1.1" 405 5678
+ERROR 2024-01-08 15:25:29,998 log 6764 8536 Internal Server Error: /mbschool/newstudent/
+ERROR 2024-01-08 15:25:29,999 basehttp 6764 8536 "POST /mbschool/newstudent/ HTTP/1.1" 500 62
+INFO 2024-01-08 15:28:36,698 basehttp 6764 8536 "POST /mbschool/newstudent/ HTTP/1.1" 201 174
+WARNING 2024-01-08 15:28:49,232 log 6764 8536 Not Acceptable: /mbschool/newstudent/
+WARNING 2024-01-08 15:28:49,233 basehttp 6764 8536 "POST /mbschool/newstudent/ HTTP/1.1" 406 32
+INFO 2024-01-08 15:29:26,109 basehttp 6764 8536 "GET /mbschool/allstudent/ HTTP/1.1" 200 1369
+INFO 2024-01-08 18:38:58,733 autoreload 6764 3220 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 18:39:32,419 autoreload 5160 12984 Watching for file changes with StatReloader
+WARNING 2024-01-08 18:45:00,625 log 5160 14132 Method Not Allowed: /mbschool/newstudent/
+WARNING 2024-01-08 18:45:00,628 basehttp 5160 14132 "GET /mbschool/newstudent/ HTTP/1.1" 405 5678
+INFO 2024-01-08 18:46:56,575 basehttp 5160 11756 "GET /mbschool/newstudent HTTP/1.1" 301 0
+WARNING 2024-01-08 18:46:56,632 log 5160 3092 Method Not Allowed: /mbschool/newstudent/
+WARNING 2024-01-08 18:46:56,633 basehttp 5160 3092 "GET /mbschool/newstudent/ HTTP/1.1" 405 5678
+INFO 2024-01-08 18:46:59,316 basehttp 5160 3092 "GET /mbschool/allstudent/ HTTP/1.1" 200 8950
+INFO 2024-01-08 19:00:51,239 autoreload 5160 12984 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 19:01:19,719 autoreload 7016 6244 Watching for file changes with StatReloader
+INFO 2024-01-08 19:01:42,106 autoreload 7016 6244 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 19:01:43,612 autoreload 13408 10460 Watching for file changes with StatReloader
+INFO 2024-01-08 19:02:06,187 autoreload 13408 10460 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 19:02:08,275 autoreload 13152 5376 Watching for file changes with StatReloader
+INFO 2024-01-08 19:02:11,208 autoreload 13152 5376 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 19:02:13,227 autoreload 2708 9916 Watching for file changes with StatReloader
+INFO 2024-01-08 19:04:41,160 autoreload 2708 9916 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 19:04:42,824 autoreload 3472 8324 Watching for file changes with StatReloader
+INFO 2024-01-08 19:05:51,451 autoreload 3472 8324 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 19:05:52,555 autoreload 11300 1912 Watching for file changes with StatReloader
+INFO 2024-01-08 19:10:44,683 autoreload 11300 1912 G:\school_management\school\mbschool\urls.py changed, reloading.
+INFO 2024-01-08 19:10:46,291 autoreload 4220 13132 Watching for file changes with StatReloader
+INFO 2024-01-08 19:10:59,874 basehttp 4220 13704 "GET /mbschool/students/ HTTP/1.1" 200 12853
+INFO 2024-01-08 19:11:19,289 basehttp 4220 456 "GET /mbschool/students/4 HTTP/1.1" 301 0
+WARNING 2024-01-08 19:11:19,320 log 4220 1108 Not Found: /mbschool/students/4/
+WARNING 2024-01-08 19:11:19,320 basehttp 4220 1108 "GET /mbschool/students/4/ HTTP/1.1" 404 10887
+INFO 2024-01-08 19:11:38,114 basehttp 4220 10748 "GET /mbschool/students/ HTTP/1.1" 200 12853
+INFO 2024-01-08 19:11:45,921 basehttp 4220 7912 "GET /mbschool/students/3 HTTP/1.1" 301 0
+INFO 2024-01-08 19:11:45,958 basehttp 4220 3360 "GET /mbschool/students/3/ HTTP/1.1" 200 11199
+INFO 2024-01-08 19:12:00,594 basehttp 4220 4028 "GET /mbschool/students/3/ HTTP/1.1" 200 11199
+INFO 2024-01-08 19:12:00,772 basehttp 4220 4028 "GET /mbschool/students/ HTTP/1.1" 200 12853
+INFO 2024-01-08 19:12:03,102 basehttp 4220 4028 "GET /mbschool/students/2/ HTTP/1.1" 200 11192
+INFO 2024-01-08 19:12:03,484 basehttp 4220 4028 "GET /mbschool/students/23 HTTP/1.1" 301 0
+WARNING 2024-01-08 19:12:03,517 log 4220 8912 Not Found: /mbschool/students/23/
+WARNING 2024-01-08 19:12:03,517 basehttp 4220 8912 "GET /mbschool/students/23/ HTTP/1.1" 404 10896
+INFO 2024-01-08 19:12:06,950 basehttp 4220 8912 "GET /mbschool/students/2/ HTTP/1.1" 200 11192
+INFO 2024-01-08 19:12:07,353 basehttp 4220 8912 "GET /mbschool/students/ HTTP/1.1" 200 12853
+INFO 2024-01-08 19:12:12,758 basehttp 4220 9508 "GET /mbschool/courses/ HTTP/1.1" 200 9295
+INFO 2024-01-08 19:12:23,867 basehttp 4220 6224 "GET /mbschool/teachers/ HTTP/1.1" 200 9463
+INFO 2024-01-08 19:12:30,919 basehttp 4220 10980 "GET /mbschool/teachers/4 HTTP/1.1" 301 0
+WARNING 2024-01-08 19:12:30,943 log 4220 5792 Not Found: /mbschool/teachers/4/
+WARNING 2024-01-08 19:12:30,944 basehttp 4220 5792 "GET /mbschool/teachers/4/ HTTP/1.1" 404 10597
+INFO 2024-01-08 19:12:42,090 basehttp 4220 6332 "GET /mbschool/teachers/ HTTP/1.1" 200 9463
+INFO 2024-01-08 19:13:43,488 autoreload 4220 13132 G:\school_management\school\mbschool\urls.py changed, reloading.
+INFO 2024-01-08 19:14:01,675 autoreload 8152 7812 Watching for file changes with StatReloader
+INFO 2024-01-08 19:14:10,963 autoreload 8152 7812 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 19:14:12,322 autoreload 432 11824 Watching for file changes with StatReloader
+INFO 2024-01-08 19:14:19,552 autoreload 432 11824 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 19:14:20,931 autoreload 2820 8040 Watching for file changes with StatReloader
+INFO 2024-01-08 19:14:27,213 autoreload 2820 8040 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 19:14:28,536 autoreload 3124 8288 Watching for file changes with StatReloader
+INFO 2024-01-08 19:14:51,337 autoreload 3124 8288 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 19:14:52,814 autoreload 12156 9052 Watching for file changes with StatReloader
+INFO 2024-01-08 19:15:42,170 autoreload 12156 9052 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 19:15:43,434 autoreload 3056 1836 Watching for file changes with StatReloader
+INFO 2024-01-08 19:18:57,618 autoreload 3056 1836 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 19:18:59,074 autoreload 1428 11820 Watching for file changes with StatReloader
+INFO 2024-01-08 19:29:45,242 autoreload 1428 11820 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 19:30:05,664 autoreload 1148 10092 Watching for file changes with StatReloader
+INFO 2024-01-08 19:30:37,736 autoreload 1148 10092 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 19:30:40,339 autoreload 844 7028 Watching for file changes with StatReloader
+INFO 2024-01-08 19:31:32,984 autoreload 844 7028 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 19:31:34,468 autoreload 2780 1484 Watching for file changes with StatReloader
+INFO 2024-01-08 19:35:58,490 autoreload 2780 1484 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 19:36:14,439 autoreload 7248 7732 Watching for file changes with StatReloader
+INFO 2024-01-08 19:36:22,503 autoreload 7248 7732 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 19:36:24,341 autoreload 9744 7716 Watching for file changes with StatReloader
+INFO 2024-01-08 19:36:36,622 basehttp 9744 12116 "GET /mbschool/students/ HTTP/1.1" 200 12853
+WARNING 2024-01-08 19:37:53,379 log 9744 1908 Bad Request: /mbschool/students/
+WARNING 2024-01-08 19:37:53,380 basehttp 9744 1908 "POST /mbschool/students/ HTTP/1.1" 400 9713
+INFO 2024-01-08 19:38:03,992 basehttp 9744 6032 "OPTIONS /mbschool/students/ HTTP/1.1" 200 11318
+WARNING 2024-01-08 19:39:40,288 log 9744 2416 Bad Request: /mbschool/students/
+WARNING 2024-01-08 19:39:40,289 basehttp 9744 2416 "POST /mbschool/students/ HTTP/1.1" 400 45
+INFO 2024-01-08 19:40:01,374 autoreload 9744 7716 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 19:40:19,513 autoreload 9712 9248 Watching for file changes with StatReloader
+INFO 2024-01-08 19:40:39,002 basehttp 9712 6276 "GET /mbschool/students/ HTTP/1.1" 200 1357
+INFO 2024-01-08 19:41:08,974 basehttp 9712 6276 "GET /mbschool/students/pratham HTTP/1.1" 301 0
+WARNING 2024-01-08 19:41:08,998 log 9712 2208 Not Found: /mbschool/students/pratham/
+WARNING 2024-01-08 19:41:09,000 basehttp 9712 2208 "GET /mbschool/students/pratham/ HTTP/1.1" 404 23
+INFO 2024-01-08 23:49:16,779 autoreload 8248 5336 Watching for file changes with StatReloader
+WARNING 2024-01-08 23:49:33,249 log 8248 7796 Method Not Allowed: /mbschool/students/search_student/
+WARNING 2024-01-08 23:49:33,250 basehttp 8248 7796 "GET /mbschool/students/search_student/ HTTP/1.1" 405 9051
+WARNING 2024-01-08 23:49:52,077 log 8248 8644 Method Not Allowed: /mbschool/students/search_student/
+WARNING 2024-01-08 23:49:52,078 basehttp 8248 8644 "GET /mbschool/students/search_student/ HTTP/1.1" 405 9051
+ERROR 2024-01-08 23:50:14,539 log 8248 12684 Internal Server Error: /mbschool/students/search_student/
+Traceback (most recent call last):
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\school\mbschool\views.py", line 34, in search_student
+    search_result = Student.objects.get(student_name__icontain=data['student_name'])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\db\models\query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\db\models\query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "G:\school_management\venv\Lib\site-packages\django\db\models\query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "G:\school_management\venv\Lib\site-packages\django\db\models\sql\query.py", line 1600, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\db\models\sql\query.py", line 1632, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\db\models\sql\query.py", line 1546, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\db\models\sql\query.py", line 1370, in build_lookup
+    lhs = self.try_transform(lhs, lookup_name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\db\models\sql\query.py", line 1414, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'icontain' for CharField or join on the field not permitted, perhaps you meant icontains or contains?
+ERROR 2024-01-08 23:50:14,553 basehttp 8248 12684 "POST /mbschool/students/search_student/ HTTP/1.1" 500 144097
+INFO 2024-01-08 23:50:39,618 autoreload 8248 5336 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 23:50:41,061 autoreload 13304 10872 Watching for file changes with StatReloader
+WARNING 2024-01-08 23:50:41,817 log 13304 10256 Method Not Allowed: /mbschool/students/search_student/
+WARNING 2024-01-08 23:50:41,819 basehttp 13304 10256 "GET /mbschool/students/search_student/ HTTP/1.1" 405 9051
+ERROR 2024-01-08 23:50:58,495 log 13304 7744 Internal Server Error: /mbschool/students/search_student/
+Traceback (most recent call last):
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\school\mbschool\views.py", line 37, in search_student
+    return Response({'Details': serializer.data}, status=status.HTTP_200_OK)
+                                ^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    raise AssertionError(msg)
+AssertionError: When a serializer is passed a `data` keyword argument you must call `.is_valid()` before attempting to access the serialized `.data` representation.
+You should either call `.is_valid()` first, or access `.initial_data` instead.
+ERROR 2024-01-08 23:50:58,500 basehttp 13304 7744 "POST /mbschool/students/search_student/ HTTP/1.1" 500 103106
+INFO 2024-01-08 23:52:06,720 autoreload 13304 10872 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 23:52:08,633 autoreload 13848 11288 Watching for file changes with StatReloader
+WARNING 2024-01-08 23:52:10,122 log 13848 8988 Method Not Allowed: /mbschool/students/search_student/
+WARNING 2024-01-08 23:52:10,123 basehttp 13848 8988 "GET /mbschool/students/search_student/ HTTP/1.1" 405 9051
+WARNING 2024-01-08 23:52:23,592 log 13848 12564 Not Found: /mbschool/students/search_student/
+WARNING 2024-01-08 23:52:23,594 basehttp 13848 12564 "POST /mbschool/students/search_student/ HTTP/1.1" 404 9021
+INFO 2024-01-08 23:53:26,190 autoreload 13848 11288 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 23:53:28,498 autoreload 11188 2804 Watching for file changes with StatReloader
+ERROR 2024-01-08 23:53:42,885 log 11188 3460 Internal Server Error: /mbschool/students/search_student/
+Traceback (most recent call last):
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\school\mbschool\views.py", line 37, in search_student
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\serializers.py", line 220, in is_valid
+    assert hasattr(self, 'initial_data'), (
+AssertionError: Cannot call `.is_valid()` as no `data=` keyword argument was passed when instantiating the serializer instance.
+ERROR 2024-01-08 23:53:42,894 basehttp 11188 3460 "POST /mbschool/students/search_student/ HTTP/1.1" 500 97521
+INFO 2024-01-08 23:54:14,525 autoreload 11188 2804 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-08 23:54:16,011 autoreload 13296 8676 Watching for file changes with StatReloader
+WARNING 2024-01-08 23:54:16,709 log 13296 13760 Method Not Allowed: /mbschool/students/search_student/
+WARNING 2024-01-08 23:54:16,710 basehttp 13296 13760 "GET /mbschool/students/search_student/ HTTP/1.1" 405 9051
+WARNING 2024-01-08 23:54:29,322 log 13296 13756 Not Found: /mbschool/students/search_student/
+WARNING 2024-01-08 23:54:29,323 basehttp 13296 13756 "POST /mbschool/students/search_student/ HTTP/1.1" 404 9021
+INFO 2024-01-09 00:04:17,929 autoreload 13296 8676 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-09 00:04:38,935 autoreload 3640 11020 Watching for file changes with StatReloader
+INFO 2024-01-09 00:06:59,850 autoreload 3640 11020 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-09 00:07:01,196 autoreload 3460 9908 Watching for file changes with StatReloader
+INFO 2024-01-09 00:08:31,415 autoreload 3460 9908 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-09 00:09:14,675 autoreload 9720 6200 Watching for file changes with StatReloader
+WARNING 2024-01-09 00:09:43,032 log 9720 12736 Method Not Allowed: /mbschool/students/search_student/
+WARNING 2024-01-09 00:09:43,033 basehttp 9720 12736 "GET /mbschool/students/search_student/ HTTP/1.1" 405 9051
+ERROR 2024-01-09 00:11:02,052 log 9720 3664 Internal Server Error: /mbschool/students/search_student/
+Traceback (most recent call last):
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\school\mbschool\views.py", line 35, in search_student
+    serializer = StudentSerializer(data=search_result).data
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    raise AssertionError(msg)
+AssertionError: When a serializer is passed a `data` keyword argument you must call `.is_valid()` before attempting to access the serialized `.data` representation.
+You should either call `.is_valid()` first, or access `.initial_data` instead.
+ERROR 2024-01-09 00:11:02,063 log 9720 7096 Internal Server Error: /mbschool/students/search_student/
+Traceback (most recent call last):
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\school\mbschool\views.py", line 35, in search_student
+    serializer = StudentSerializer(data=search_result).data
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    raise AssertionError(msg)
+AssertionError: When a serializer is passed a `data` keyword argument you must call `.is_valid()` before attempting to access the serialized `.data` representation.
+You should either call `.is_valid()` first, or access `.initial_data` instead.
+ERROR 2024-01-09 00:11:02,082 log 9720 5448 Internal Server Error: /mbschool/students/search_student/
+Traceback (most recent call last):
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\school\mbschool\views.py", line 35, in search_student
+    serializer = StudentSerializer(data=search_result).data
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    raise AssertionError(msg)
+AssertionError: When a serializer is passed a `data` keyword argument you must call `.is_valid()` before attempting to access the serialized `.data` representation.
+You should either call `.is_valid()` first, or access `.initial_data` instead.
+ERROR 2024-01-09 00:11:02,118 log 9720 7000 Internal Server Error: /mbschool/students/search_student/
+Traceback (most recent call last):
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\school\mbschool\views.py", line 35, in search_student
+    serializer = StudentSerializer(data=search_result).data
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    raise AssertionError(msg)
+AssertionError: When a serializer is passed a `data` keyword argument you must call `.is_valid()` before attempting to access the serialized `.data` representation.
+You should either call `.is_valid()` first, or access `.initial_data` instead.
+ERROR 2024-01-09 00:11:02,127 log 9720 14240 Internal Server Error: /mbschool/students/search_student/
+Traceback (most recent call last):
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\school\mbschool\views.py", line 35, in search_student
+    serializer = StudentSerializer(data=search_result).data
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "G:\school_management\venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    raise AssertionError(msg)
+AssertionError: When a serializer is passed a `data` keyword argument you must call `.is_valid()` before attempting to access the serialized `.data` representation.
+You should either call `.is_valid()` first, or access `.initial_data` instead.
+ERROR 2024-01-09 00:11:02,139 basehttp 9720 3664 "POST /mbschool/students/search_student/ HTTP/1.1" 500 102401
+ERROR 2024-01-09 00:11:02,142 basehttp 9720 7096 "POST /mbschool/students/search_student/ HTTP/1.1" 500 102401
+ERROR 2024-01-09 00:11:02,145 basehttp 9720 5448 "POST /mbschool/students/search_student/ HTTP/1.1" 500 102401
+ERROR 2024-01-09 00:11:02,149 basehttp 9720 7000 "POST /mbschool/students/search_student/ HTTP/1.1" 500 102401
+ERROR 2024-01-09 00:11:02,152 basehttp 9720 14240 "POST /mbschool/students/search_student/ HTTP/1.1" 500 102401
+WARNING 2024-01-09 00:12:30,254 log 9720 9500 Method Not Allowed: /mbschool/students/search_student/
+WARNING 2024-01-09 00:12:30,254 basehttp 9720 9500 "GET /mbschool/students/search_student/ HTTP/1.1" 405 9051
+INFO 2024-01-09 00:13:02,082 autoreload 9720 6200 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-09 00:13:03,782 autoreload 11052 12076 Watching for file changes with StatReloader
+WARNING 2024-01-09 00:13:04,407 log 11052 4468 Method Not Allowed: /mbschool/students/search_student/
+WARNING 2024-01-09 00:13:04,408 basehttp 11052 4468 "GET /mbschool/students/search_student/ HTTP/1.1" 405 9051
+WARNING 2024-01-09 00:13:29,105 log 11052 8684 Not Found: /mbschool/students/search_student/
+WARNING 2024-01-09 00:13:29,107 basehttp 11052 8684 "POST /mbschool/students/search_student/ HTTP/1.1" 404 9021
+INFO 2024-01-09 00:13:39,366 basehttp 11052 6600 "GET /mbschool/students/ HTTP/1.1" 200 13435
+INFO 2024-01-09 00:15:05,576 autoreload 11052 12076 G:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-09 00:15:07,698 autoreload 8360 7796 Watching for file changes with StatReloader
+WARNING 2024-01-09 00:15:08,233 log 8360 7852 Method Not Allowed: /mbschool/students/search_student/
+WARNING 2024-01-09 00:15:08,236 basehttp 8360 7852 "GET /mbschool/students/search_student/ HTTP/1.1" 405 9051
+WARNING 2024-01-09 00:15:37,354 log 8360 3212 Not Found: /mbschool/students/search_student/
+WARNING 2024-01-09 00:15:37,355 basehttp 8360 3212 "POST /mbschool/students/search_student/ HTTP/1.1" 404 9021
