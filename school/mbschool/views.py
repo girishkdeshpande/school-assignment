@@ -1,4 +1,4 @@
-from .models import Course, Student, Teacher
+from .models import *
 from .serializer import *
 from rest_framework.response import Response
 from rest_framework import status
@@ -13,7 +13,6 @@ email_str = r"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
 
 # Student APIs
 class StudentList(APIView):
-
     # View all student
     def get(self, request):
         try:
@@ -120,7 +119,21 @@ class StudentDetail(APIView):
 
 
 class StudentCustom(APIView):
-    pass
+    # Assign course to student
+    def post(self, request):
+        try:
+            student = Student.objects.get(id=request.data['id'])
+            if student:
+                for course in request.data['courses']:
+                    # assign_course = Course.objects.get(id=course)
+                    student.courses.add(Course.objects.get(id=course))
+                return Response({'Message': 'Course assigned'})
+
+        except ObjectDoesNotExist:
+            return Response({'Error': 'Student does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
+        except Exception as e:
+            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 # Course APIs
@@ -227,8 +240,8 @@ class TeacherList(APIView):
     def get(self, request):
         try:
             teachers = Teacher.objects.all()
+            serializer = TeacherSerializer(teachers, many=True)
             if teachers:
-                serializer = TeacherSerializer(teachers, many=True)
                 return Response({'Teachers': serializer.data}, status=status.HTTP_200_OK)
 
             else:
@@ -314,6 +327,24 @@ class TeacherDetail(APIView):
 
         except ObjectDoesNotExist:
             return Response({'Error': 'Record does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
+        except Exception as e:
+            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class TeacherCustom(APIView):
+    # Assign course to teacher
+    def post(self, request):
+        try:
+            teacher = Teacher.objects.get(id=request.data['id'])
+            if teacher:
+                for course in request.data['courses']:
+                    # assign_course = Course.objects.get(id=course)
+                    teacher.courses.add(Course.objects.get(id=course))
+                return Response({'Message': 'Course assigned'})
+
+        except ObjectDoesNotExist:
+            return Response({'Error': 'Teacher does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
             return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

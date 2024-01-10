@@ -16,7 +16,7 @@ class Student(models.Model):
     student_email = models.EmailField(unique=True, null=False)
     enrolled_year = models.DateField(default=date.today)
     student_status = models.BooleanField(default=True)
-    # courses = models.ManyToManyField(Course, related_name='student_courses')
+    courses = models.ManyToManyField(Course, related_name='students')
 
     def __str__(self):
         return self.student_name
@@ -26,8 +26,11 @@ class Teacher(models.Model):
     teacher_name = models.CharField(max_length=30, null=False)
     teacher_email = models.EmailField(unique=True, null=False)
     teacher_status = models.BooleanField(default=True)
+    courses = models.ManyToManyField(Course, related_name='teachers')
 
     def __str__(self):
         return self.teacher_name
+
+
 
 

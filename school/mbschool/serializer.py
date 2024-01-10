@@ -1,28 +1,57 @@
 from rest_framework import serializers
-from .models import Student, Course, Teacher
+from .models import *
 
 
-class CourseSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Course
-        fields = ['id', 'course_name', 'course_status']
-
-
-class StudentSerializer(serializers.ModelSerializer):
-    # courses = CourseSerializer(many=True)
-
+class StudentBase(serializers.ModelSerializer):
     class Meta:
         model = Student
         fields = ['id', 'student_name', 'student_email', 'enrolled_year', 'student_status']
 
 
-class StudentPost(StudentSerializer):
-    class Meta:
-        model = Student
-        fields = ['student_name', 'student_email', 'enrolled_year']
-
-
-class TeacherSerializer(serializers.ModelSerializer):
+class TeacherBase(serializers.ModelSerializer):
     class Meta:
         model = Teacher
         fields = ['id', 'teacher_name', 'teacher_email', 'teacher_status']
+
+
+class CourseSerializer(serializers.ModelSerializer):
+    students = StudentBase(many=True, read_only=True)
+    teachers = TeacherBase(many=True, read_only=True)
+
+    class Meta:
+        model = Course
+        fields = ['id', 'course_name', 'course_status', 'students', 'teachers']
+
+
+class StudentCourse(serializers.ModelSerializer):
+    teachers = TeacherBase(many=True, read_only=True)
+
+    class Meta:
+        model = Course
+        fields = ['id', 'course_name', 'course_status', 'teachers']
+
+
+class TeacherCourse(serializers.ModelSerializer):
+    students = StudentBase(many=True, read_only=True)
+
+    class Meta:
+        model = Course
+        fields = ['id', 'course_name', 'course_status', 'students']
+
+
+class StudentSerializer(serializers.ModelSerializer):
+    courses = StudentCourse(many=True, read_only=True)
+
+    class Meta:
+        model = Student
+        fields = ['id', 'student_name', 'student_email', 'enrolled_year', 'student_status', 'courses']
+
+
+class TeacherSerializer(serializers.ModelSerializer):
+    courses = TeacherCourse(many=True, read_only=True)
+
+    class Meta:
+        model = Teacher
+        fields = ['id', 'teacher_name', 'teacher_email', 'teacher_status', 'courses']
+
+
