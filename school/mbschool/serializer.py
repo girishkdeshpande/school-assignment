@@ -1,6 +1,25 @@
 from rest_framework import serializers
 from .models import *
 
+from django.contrib.auth.models import User
+
+
+
+class DynamicFieldsSerializerMixin(object):
+    def __init__(self, *args, **kwargs):
+        # Don't pass the 'fields' arg up to the superclass
+        fields = kwargs.pop("fields", None)
+
+        # Instantiate the superclass normally
+        super(DynamicFieldsSerializerMixin, self).__init__(*args, **kwargs)
+
+        if fields is not None:
+            # Drop any fields that are not specified in the `fields` argument.
+            allowed = set(fields)
+            existing = set(self.fields.keys())
+            for field_name in existing - allowed:
+                self.fields.pop(field_name)
+
 
 class StudentBase(serializers.ModelSerializer):
     class Meta:
@@ -14,7 +33,7 @@ class TeacherBase(serializers.ModelSerializer):
         fields = ['id', 'teacher_name', 'teacher_email', 'teacher_status']
 
 
-class CourseSerializer(serializers.ModelSerializer):
+class CourseSerializer(DynamicFieldsSerializerMixin, serializers.ModelSerializer):
     students = StudentBase(many=True, read_only=True)
     teachers = TeacherBase(many=True, read_only=True)
 
@@ -40,7 +59,7 @@ class TeacherCourse(serializers.ModelSerializer):
 
 
 class StudentSerializer(serializers.ModelSerializer):
-    courses = StudentCourse(many=True, read_only=True)
+    courses = CourseSerializer(many=True, read_only=True, fields=('id', 'course_name', 'course_status', 'teachers'))
 
     class Meta:
         model = Student
@@ -54,4 +73,13 @@ class TeacherSerializer(serializers.ModelSerializer):
         model = Teacher
         fields = ['id', 'teacher_name', 'teacher_email', 'teacher_status', 'courses']
 
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'password']
+        extra_kwargs = {'password': {
+            'write_only': True,
+            'required': True
+        }}
 

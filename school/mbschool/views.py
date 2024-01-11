@@ -1,9 +1,15 @@
 from .models import *
 from .serializer import *
+
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.authtoken.views import Token
+from django.contrib.auth.hashers import make_password
+
 from django.core.exceptions import ObjectDoesNotExist
+from django.contrib.auth.models import User
 
 import re
 
@@ -13,6 +19,8 @@ email_str = r"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
 
 # Student APIs
 class StudentList(APIView):
+    authentication_classes = (TokenAuthentication,)
+
     # View all student
     def get(self, request):
         try:
@@ -54,6 +62,7 @@ class StudentList(APIView):
 
 
 class StudentDetail(APIView):
+    authentication_classes = (TokenAuthentication,)
 
     # View student by id
     def get(self, request, pk):
@@ -119,6 +128,8 @@ class StudentDetail(APIView):
 
 
 class StudentCustom(APIView):
+    authentication_classes = (TokenAuthentication,)
+
     # Assign course to student
     def post(self, request):
         try:
@@ -133,12 +144,14 @@ class StudentCustom(APIView):
             return Response({'Error': 'Student does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
-            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response({'Error': f'An unexpected error occurred - {e}'},
+                            status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 # Course APIs
-
 class CourseList(APIView):
+    authentication_classes = (TokenAuthentication,)
+
     # View all course
     def get(self, request):
         try:
@@ -173,6 +186,8 @@ class CourseList(APIView):
 
 
 class CourseDetail(APIView):
+    authentication_classes = (TokenAuthentication,)
+
     # View course by id
     def get(self, request, pk):
         try:
@@ -184,7 +199,8 @@ class CourseDetail(APIView):
             return Response({'Error': 'Record not found'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
-            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response({'Error': f'An unexpected error occurred - {e}'},
+                            status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # Update Course
     def put(self, request, pk):
@@ -216,7 +232,8 @@ class CourseDetail(APIView):
             return Response({'Error': 'Record not found'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
-            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response({'Error': f'An unexpected error occurred - {e}'},
+                            status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # Soft delete course
     def patch(self, request, pk):
@@ -231,11 +248,14 @@ class CourseDetail(APIView):
             return Response({'Error': 'Record not found'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
-            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response({'Error': f'An unexpected error occurred - {e}'},
+                            status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 # Teacher APIs
 class TeacherList(APIView):
+    authentication_classes = (TokenAuthentication,)
+
     # View all teachers
     def get(self, request):
         try:
@@ -248,7 +268,8 @@ class TeacherList(APIView):
                 return Response({'Error': 'No Records'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
-            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response({'Error': f'An unexpected error occurred - {e}'},
+                            status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # New Teacher
     def post(self, request):
@@ -268,10 +289,13 @@ class TeacherList(APIView):
                 return Response({'Error': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
         except Exception as e:
-            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response({'Error': f'An unexpected error occurred - {e}'},
+                            status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class TeacherDetail(APIView):
+    authentication_classes = (TokenAuthentication,)
+
     # View teacher by id
     def get(self, request, pk):
         try:
@@ -283,7 +307,8 @@ class TeacherDetail(APIView):
             return Response({'Error': 'Record does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
-            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response({'Error': f'An unexpected error occurred - {e}'},
+                            status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # Update teacher
     def put(self, request, pk):
@@ -292,7 +317,8 @@ class TeacherDetail(APIView):
             serializer = TeacherSerializer(teacher, data=request.data)
             if serializer.is_valid():
                 serializer.save()
-                return Response({'Teacher': serializer.data, 'Message': 'Record updated'}, status=status.HTTP_202_ACCEPTED)
+                return Response({'Teacher': serializer.data, 'Message': 'Record updated'},
+                                status=status.HTTP_202_ACCEPTED)
 
             else:
                 return Response({'Error': serializer.errors}, status=status.HTTP_406_NOT_ACCEPTABLE)
@@ -301,7 +327,8 @@ class TeacherDetail(APIView):
             return Response({'Error': 'Record does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
-            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response({'Error': f'An unexpected error occurred - {e}'},
+                            status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # Delete teacher
     def delete(self, request, pk):
@@ -314,7 +341,8 @@ class TeacherDetail(APIView):
             return Response({'Error': 'Record does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
-            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response({'Error': f'An unexpected error occurred - {e}'},
+                            status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # Soft delete teacher
     def patch(self, request, pk):
@@ -329,10 +357,13 @@ class TeacherDetail(APIView):
             return Response({'Error': 'Record does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
-            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response({'Error': f'An unexpected error occurred - {e}'},
+                            status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class TeacherCustom(APIView):
+    authentication_classes = (TokenAuthentication,)
+
     # Assign course to teacher
     def post(self, request):
         try:
@@ -347,4 +378,37 @@ class TeacherCustom(APIView):
             return Response({'Error': 'Teacher does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
+            return Response({'Error': f'An unexpected error occurred - {e}'},
+                            status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class UserList(APIView):
+    authentication_classes = (TokenAuthentication,)
+
+    # View all users
+    def get(self, request):
+        try:
+            user = User.objects.all()
+            serializer = UserSerializer(user, many=True)
+            return Response({'Users': serializer.data}, status=status.HTTP_200_OK)
+
+        except ObjectDoesNotExist:
+            return Response({'Error': 'No records'}, status=status.HTTP_404_NOT_FOUND)
+
+        except Exception as e:
             return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    def post(self, request):
+        try:
+            serializer = UserSerializer(data=request.data)
+            if serializer.is_valid():
+                password = make_password(request.data['password'])
+                serializer.save(password=password)
+                Token.objects.create(user=request.data['username'])
+                return Response({'Message': "User created"}, status=status.HTTP_200_OK)
+            else:
+                return Response({'Error': serializer.errors}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
