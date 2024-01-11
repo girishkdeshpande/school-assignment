@@ -404,7 +404,7 @@ class UserList(APIView):
             if serializer.is_valid():
                 password = make_password(request.data['password'])
                 serializer.save(password=password)
-                Token.objects.create(user=request.data['username'])
+                Token.objects.create(user_id=serializer.data['id'])
                 return Response({'Message': "User created"}, status=status.HTTP_200_OK)
             else:
                 return Response({'Error': serializer.errors}, status=status.HTTP_200_OK)
