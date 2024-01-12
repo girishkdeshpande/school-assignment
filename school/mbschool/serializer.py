@@ -4,7 +4,6 @@ from .models import *
 from django.contrib.auth.models import User
 
 
-
 class DynamicFieldsSerializerMixin(object):
     def __init__(self, *args, **kwargs):
         # Don't pass the 'fields' arg up to the superclass
@@ -32,16 +31,7 @@ class TeacherBase(serializers.ModelSerializer):
         model = Teacher
         fields = ['id', 'teacher_name', 'teacher_email', 'teacher_status']
 
-
-class CourseSerializer(DynamicFieldsSerializerMixin, serializers.ModelSerializer):
-    students = StudentBase(many=True, read_only=True)
-    teachers = TeacherBase(many=True, read_only=True)
-
-    class Meta:
-        model = Course
-        fields = ['id', 'course_name', 'course_status', 'students', 'teachers']
-
-
+'''
 class StudentCourse(serializers.ModelSerializer):
     teachers = TeacherBase(many=True, read_only=True)
 
@@ -56,6 +46,16 @@ class TeacherCourse(serializers.ModelSerializer):
     class Meta:
         model = Course
         fields = ['id', 'course_name', 'course_status', 'students']
+'''
+
+
+class CourseSerializer(DynamicFieldsSerializerMixin, serializers.ModelSerializer):
+    students = StudentBase(many=True, read_only=True)
+    teachers = TeacherBase(many=True, read_only=True)
+
+    class Meta:
+        model = Course
+        fields = ['id', 'course_name', 'course_status', 'students', 'teachers']
 
 
 class StudentSerializer(serializers.ModelSerializer):
@@ -67,11 +67,13 @@ class StudentSerializer(serializers.ModelSerializer):
 
 
 class TeacherSerializer(serializers.ModelSerializer):
-    courses = TeacherCourse(many=True, read_only=True)
+    courses = CourseSerializer(many=True, read_only=True)
 
     class Meta:
         model = Teacher
         fields = ['id', 'teacher_name', 'teacher_email', 'teacher_status', 'courses']
+
+
 
 
 class UserSerializer(serializers.ModelSerializer):

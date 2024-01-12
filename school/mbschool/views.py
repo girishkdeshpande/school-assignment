@@ -12,8 +12,12 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.models import User
 
 import re
+import logging
 
-special_str = re.compile('[@_!#$%^&*()<>?\/}|{~:]')
+logger = logging.getLogger('django')
+# logger_school = logging.getLogger('mbschool')
+
+special_str = re.compile('[@_!#$%^&*()<>?\,;"/}|{~:0-9]')
 email_str = r"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
 
 
@@ -29,18 +33,21 @@ class StudentList(APIView):
             return Response({'Students': serializer.data}, status=status.HTTP_200_OK)
 
         except ObjectDoesNotExist:
+            logger.error('No Records')
             return Response({"Error": 'No Records'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
+            logger.error(f'An unexpected error - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # Enroll new student
     def post(self, request):
         try:
-            if 'id' in request.data or 'student_status' in request.data:
+            if 'id' or 'student_status' or 'enrolled_year' in request.data:
                 request.data.pop('id')
                 request.data.pop('student_status')
+                request.data.pop('enrolled_year')
 
             if special_str.search(request.data['student_name']):
                 return Response({'Error': "Name should have characters only"}, status=status.HTTP_406_NOT_ACCEPTABLE)
@@ -51,6 +58,7 @@ class StudentList(APIView):
             serializer = StudentSerializer(data=request.data)
             if serializer.is_valid():
                 serializer.save()
+                logger.info('All records fetched')
                 return Response({'Student': serializer.data}, status=status.HTTP_201_CREATED)
 
             else:
@@ -405,10 +413,14 @@ class UserList(APIView):
                 password = make_password(request.data['password'])
                 serializer.save(password=password)
                 Token.objects.create(user_id=serializer.data['id'])
-                return Response({'Message': "User created"}, status=status.HTTP_200_OK)
+                return Response({'Message': serializer.data}, status=status.HTTP_200_OK)
             else:
                 return Response({'Error': serializer.errors}, status=status.HTTP_200_OK)
 
         except Exception as e:
             return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+
+
 
