@@ -15,7 +15,6 @@ import re
 import logging
 
 logger = logging.getLogger('django')
-# logger_school = logging.getLogger('mbschool')
 
 special_str = re.compile('[@_!#$%^&*()<>?\,;"/}|{~:0-9]')
 email_str = r"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
@@ -43,6 +42,7 @@ class StudentList(APIView):
 
     # Enroll new student
     def post(self, request):
+        logger.info(f'Input - {request.data}')
         try:
             if 'id' or 'student_status' or 'enrolled_year' in request.data:
                 request.data.pop('id')
@@ -50,22 +50,26 @@ class StudentList(APIView):
                 request.data.pop('enrolled_year')
 
             if special_str.search(request.data['student_name']):
+                logger.error('Name should have characters only')
                 return Response({'Error': "Name should have characters only"}, status=status.HTTP_406_NOT_ACCEPTABLE)
 
             if not re.match(email_str, request.data['student_email']):
+                logger.error('Invalid email id')
                 return Response({'Error': "Invalid email id"}, status=status.HTTP_406_NOT_ACCEPTABLE)
 
             serializer = StudentSerializer(data=request.data)
             if serializer.is_valid():
                 serializer.save()
-                logger.info('All records fetched')
+                logger.info(f'Saved record - {serializer.data}')
                 return Response({'Student': serializer.data}, status=status.HTTP_201_CREATED)
 
             else:
+                logger.error(f'Error - {serializer.errors}')
                 return Response({'Error': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
         except Exception as e:
-            return Response({'Error': f'An unexpected error occured - {e}'},
+            logger.error(f'An unexpected error occurred - {e}')
+            return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
@@ -74,20 +78,24 @@ class StudentDetail(APIView):
 
     # View student by id
     def get(self, request, pk):
+        logger.info(f'Input - {pk}')
         try:
             student = Student.objects.get(pk=pk)
             serializer = StudentSerializer(student)
             return Response({'Student': serializer.data}, status=status.HTTP_200_OK)
 
         except ObjectDoesNotExist:
+            logger.error('Record does not exist')
             return Response({'Error': 'Record does not exist'})
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # Update student record
     def put(self, request, pk):
+        logger.info(f'Input - {pk} {request.data}')
         try:
             student = Student.objects.get(pk=pk)
             serializer = StudentSerializer(student, data=request.data)
@@ -96,31 +104,38 @@ class StudentDetail(APIView):
                 return Response({'Student': serializer.data, 'Message': 'Record updated'},
                                 status=status.HTTP_202_ACCEPTED)
             else:
+                logger.error(f'Error - {serializer.errors}')
                 return Response({'Error': serializer.errors}, status=status.HTTP_406_NOT_ACCEPTABLE)
 
         except ObjectDoesNotExist:
-            return Response({'Error': 'Record does not exist'})
+            logger.info('Record does not exist')
+            return Response({'Error': 'Record does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # Delete student record
     def delete(self, request, pk):
+        logger.info(f'Input - {pk}')
         try:
             student = Student.objects.get(pk=pk)
             student.delete()
             return Response({'Message': 'Record deleted'}, status=status.HTTP_204_NO_CONTENT)
 
         except ObjectDoesNotExist:
-            return Response({'Error': 'Record does not exist'})
+            logger.error('Record does not exist')
+            return Response({'Error': 'Record does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # Soft delete student
     def patch(self, request, pk):
+        logger.info(f'Input - {pk}')
         try:
             student = Student.objects.get(pk=pk)
             student.student_status = False
@@ -128,9 +143,11 @@ class StudentDetail(APIView):
             return Response({'Student': student}, status=status.HTTP_202_ACCEPTED)
 
         except ObjectDoesNotExist:
-            return Response({'Error': 'Record does not exist'})
+            logger.error('Record does not exist')
+            return Response({'Error': 'Record does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
@@ -140,6 +157,7 @@ class StudentCustom(APIView):
 
     # Assign course to student
     def post(self, request):
+        logger.info(f'Input - {request.data}')
         try:
             student = Student.objects.get(id=request.data['id'])
             if student:
@@ -149,9 +167,11 @@ class StudentCustom(APIView):
                 return Response({'Message': 'Course assigned'})
 
         except ObjectDoesNotExist:
+            logger.error('Student does not exist')
             return Response({'Error': 'Student does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
@@ -168,16 +188,20 @@ class CourseList(APIView):
             return Response({'Courses': serializer.data}, status=status.HTTP_200_OK)
 
         except ObjectDoesNotExist:
-            return Response({'Error': 'No Records'}, status=status.HTTP_404_NOT_FOUND)
+            logger.error('Records does not exist')
+            return Response({'Error': 'Records does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # New Course
     def post(self, request):
+        logger.info(f'Input - {request.data}')
         try:
             if special_str.search(request.data['course_name']):
+                logger.error("Name should have characters only")
                 return Response({'Error': "Name should have characters only"}, status=status.HTTP_406_NOT_ACCEPTABLE)
 
             serializer = CourseSerializer(data=request.data)
@@ -186,9 +210,11 @@ class CourseList(APIView):
                 return Response({'Course': serializer.data, 'Message': 'Created'}, status=status.HTTP_201_CREATED)
 
             else:
+                logger.error(f'Error - {serializer.errors}')
                 return Response({'Error': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
@@ -198,20 +224,24 @@ class CourseDetail(APIView):
 
     # View course by id
     def get(self, request, pk):
+        logger.info(f'Input - {pk}')
         try:
             course = Course.objects.get(pk=pk)
             serializer = CourseSerializer(course)
             return Response({'Courses': serializer.data}, status=status.HTTP_200_OK)
 
         except ObjectDoesNotExist:
+            logger.error('Record not found')
             return Response({'Error': 'Record not found'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # Update Course
     def put(self, request, pk):
+        logger.info(f'Input - {pk} {request.data}')
         try:
             course = Course.objects.get(pk=pk)
             serializer = CourseSerializer(course, data=request.data)
@@ -220,31 +250,38 @@ class CourseDetail(APIView):
                 return Response({'Details': serializer.data, 'Message': 'Record updated'}, status=status.HTTP_200_OK)
 
             else:
+                logger.error(f'Error - {serializer.errors}')
                 return Response({'Error': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
         except ObjectDoesNotExist:
+            logger.error('Record not found')
             return Response({'Error': 'Record not found'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # Delete course
     def delete(self, request, pk):
+        logger.info(f'Input - {pk}')
         try:
             course = Course.objects.get(pk=pk)
             course.delete()
             return Response({'Message': 'Record delete'}, status=status.HTTP_204_NO_CONTENT)
 
         except ObjectDoesNotExist:
+            logger.error('Record not found')
             return Response({'Error': 'Record not found'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # Soft delete course
     def patch(self, request, pk):
+        logger.info(f'Input - {pk}')
         try:
             course = Course.objects.get(pk=pk)
             if course.course_status:
@@ -253,9 +290,11 @@ class CourseDetail(APIView):
                 return Response({'Courses': course, 'Message': 'Course deleted'}, status=status.HTTP_200_OK)
 
         except ObjectDoesNotExist:
+            logger.error('Record not found')
             return Response({'Error': 'Record not found'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
@@ -273,19 +312,24 @@ class TeacherList(APIView):
                 return Response({'Teachers': serializer.data}, status=status.HTTP_200_OK)
 
             else:
+                logger.error('No Records')
                 return Response({'Error': 'No Records'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # New Teacher
     def post(self, request):
+        logger.info(f'Input - {request.data}')
         try:
             if special_str.search(request.data['teacher_name']):
+                logger.error("Name should have characters only")
                 return Response({'Error': "Name should have characters only"}, status=status.HTTP_406_NOT_ACCEPTABLE)
 
             if not re.match(email_str, request.data['teacher_email']):
+                logger.error("Invalid email id")
                 return Response({'Error': "Invalid email id"}, status=status.HTTP_406_NOT_ACCEPTABLE)
 
             serializer = TeacherSerializer(data=request.data)
@@ -294,9 +338,11 @@ class TeacherList(APIView):
                 return Response({'Teacher': serializer.data}, status=status.HTTP_200_OK)
 
             else:
+                logger.error(f'Error - {serializer.errors}')
                 return Response({'Error': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
@@ -306,20 +352,24 @@ class TeacherDetail(APIView):
 
     # View teacher by id
     def get(self, request, pk):
+        logger.info(f'Input - {pk}')
         try:
             teacher = Teacher.objects.get(pk=pk)
             serializer = TeacherSerializer(teacher)
             return Response({'Teacher': serializer.data}, status=status.HTTP_200_OK)
 
         except ObjectDoesNotExist:
+            logger.error('Record does not exist')
             return Response({'Error': 'Record does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # Update teacher
     def put(self, request, pk):
+        logger.info(f'Input - {pk} {request.data}')
         try:
             teacher = Teacher.objects.get(pk=pk)
             serializer = TeacherSerializer(teacher, data=request.data)
@@ -329,31 +379,38 @@ class TeacherDetail(APIView):
                                 status=status.HTTP_202_ACCEPTED)
 
             else:
+                logger.error(f'Error - {serializer.errors}')
                 return Response({'Error': serializer.errors}, status=status.HTTP_406_NOT_ACCEPTABLE)
 
         except ObjectDoesNotExist:
+            logger.error('Record does not exist')
             return Response({'Error': 'Record does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # Delete teacher
     def delete(self, request, pk):
+        logger.info(f'Input - {pk}')
         try:
             teacher = Teacher.objects.get(pk=pk)
             teacher.delete()
             return Response({'Message': 'Record deleted'}, status=status.HTTP_204_NO_CONTENT)
 
         except ObjectDoesNotExist:
+            logger.error('Record does not exist')
             return Response({'Error': 'Record does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # Soft delete teacher
     def patch(self, request, pk):
+        logger.info(f'Input - {pk}')
         try:
             teacher = Teacher.objects.get(pk=pk)
             if teacher.teacher_status:
@@ -362,9 +419,11 @@ class TeacherDetail(APIView):
                 return Response({'Message': 'Record deleted'}, status=status.HTTP_204_NO_CONTENT)
 
         except ObjectDoesNotExist:
+            logger.error('Record does not exist')
             return Response({'Error': 'Record does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
@@ -374,6 +433,7 @@ class TeacherCustom(APIView):
 
     # Assign course to teacher
     def post(self, request):
+        logger.info(f'Input - {request.data}')
         try:
             teacher = Teacher.objects.get(id=request.data['id'])
             if teacher:
@@ -383,9 +443,11 @@ class TeacherCustom(APIView):
                 return Response({'Message': 'Course assigned'})
 
         except ObjectDoesNotExist:
+            logger.error('Teacher does not exist')
             return Response({'Error': 'Teacher does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
@@ -401,12 +463,15 @@ class UserList(APIView):
             return Response({'Users': serializer.data}, status=status.HTTP_200_OK)
 
         except ObjectDoesNotExist:
-            return Response({'Error': 'No records'}, status=status.HTTP_404_NOT_FOUND)
+            logger.error('Record does not exist')
+            return Response({'Error': 'Record does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     def post(self, request):
+        logger.info(f'Input - {request.data}')
         try:
             serializer = UserSerializer(data=request.data)
             if serializer.is_valid():
@@ -415,9 +480,11 @@ class UserList(APIView):
                 Token.objects.create(user_id=serializer.data['id'])
                 return Response({'Message': serializer.data}, status=status.HTTP_200_OK)
             else:
+                logger.error(f'Error - {serializer.errors}')
                 return Response({'Error': serializer.errors}, status=status.HTTP_200_OK)
 
         except Exception as e:
+            logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 

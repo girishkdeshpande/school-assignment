@@ -162,10 +162,5 @@ LOGGING = {
             "level": "INFO",
             "propagate": True,
         },
-        # "mbschool.request": {
-        #     "handlers": ["file"],
-        #     "level": "DEBUG",
-        #     "propagate": False,
-        # },
     },
 }

@@ -7643,3 +7643,8 @@ INFO 2024-01-12 18:46:55,897 autoreload G:\school_management\school\mbschool\vie
 INFO 2024-01-12 18:47:18,013 autoreload Watching for file changes with StatReloader
 INFO 2024-01-12 19:14:00,548 autoreload G:\school_management\school\mbschool\views.py changed, reloading.
 INFO 2024-01-12 19:14:30,567 autoreload Watching for file changes with StatReloader
+WARNING 2024-01-12 19:15:45,458 log Unauthorized: /mbschool/students/
+WARNING 2024-01-12 19:15:45,459 basehttp "GET /mbschool/students/ HTTP/1.1" 401 5119
+INFO 2024-01-12 19:35:04,083 autoreload G:\school_management\school\mbschool\urls.py changed, reloading.
+INFO 2024-01-12 19:35:31,261 autoreload Watching for file changes with StatReloader
+INFO 2024-01-13 23:19:07,503 autoreload Watching for file changes with StatReloader

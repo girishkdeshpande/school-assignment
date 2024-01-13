@@ -9,7 +9,7 @@ from .views import *
 # router.register('teachers', TeacherViewSet, basename='teachers')
 
 urlpatterns = [
-    path('students/', StudentList.as_view()),
+    path('students/', StudentList.as_view(), name='students'),
     path('students/<int:pk>', StudentDetail.as_view()),
     path('studentcourse/', StudentCustom.as_view()),
 
