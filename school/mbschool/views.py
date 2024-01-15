@@ -44,11 +44,6 @@ class StudentList(APIView):
     def post(self, request):
         logger.info(f'Input - {request.data}')
         try:
-            if 'id' or 'student_status' or 'enrolled_year' in request.data:
-                request.data.pop('id')
-                request.data.pop('student_status')
-                request.data.pop('enrolled_year')
-
             if special_str.search(request.data['student_name']):
                 logger.error('Name should have characters only')
                 return Response({'Error': "Name should have characters only"}, status=status.HTTP_406_NOT_ACCEPTABLE)

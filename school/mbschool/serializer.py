@@ -74,8 +74,6 @@ class TeacherSerializer(serializers.ModelSerializer):
         fields = ['id', 'teacher_name', 'teacher_email', 'teacher_status', 'courses']
 
 
-
-
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
