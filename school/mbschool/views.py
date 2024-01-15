@@ -308,12 +308,11 @@ class TeacherList(APIView):
         try:
             teachers = Teacher.objects.all()
             serializer = TeacherSerializer(teachers, many=True)
-            if teachers:
-                return Response({'Teachers': serializer.data}, status=status.HTTP_200_OK)
+            return Response({'Teachers': serializer.data}, status=status.HTTP_200_OK)
 
-            else:
-                logger.error('No Records')
-                return Response({'Error': 'No Records'}, status=status.HTTP_404_NOT_FOUND)
+        except ObjectDoesNotExist:
+            logger.error('No Records')
+            return Response({'Error': 'No Records'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
             logger.error(f'An unexpected error occurred - {e}')
