@@ -92,6 +92,133 @@ class TestCourseList(TestCase):
         self.assertEqual(response.status_code, 406)
 
 
+class TestCourseDetails(TestCase):
+
+    def setUp(self):
+        self.client = Client()
+        self.url = reverse('courses/id', args=[1])
+        self.data = Course.objects.create(
+            course_name='python'
+        )
+        self.data_put_success = {
+            'course_name': 'python with react'
+        }
+        self.data_put_unsuccess = {
+            'course_name': 'python 3.11.5'
+        }
+        self.data_put_no_data = {
+            'course_name': ''
+        }
+
+    def test_get_success(self):
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, 200)
+
+    def test_get_unsuccess(self):
+        response = self.client.get(reverse('courses/id', args=[2]))
+        self.assertEqual(response.status_code, 404)
+
+    def test_put_success(self):
+        response = self.client.put(self.url, data=self.data_put_success, content_type='application/json')
+        self.assertEqual(response.status_code, 200)
+
+    def test_put_unsuccess(self):
+        response = self.client.put(self.url, data=self.data_put_unsuccess, content_type='application/json')
+        self.assertEqual(response.status_code, 406)
+
+    def test_put_no_data(self):
+        response = self.client.put(self.url, data=self.data_put_no_data, content_type='application/json')
+        self.assertEqual(response.status_code, 400)
+
+    def test_delete_success(self):
+        response = self.client.delete(self.url)
+        self.assertEqual(response.status_code, 204)
+        self.assertFalse(Course.objects.filter(id=self.data.id).exists())
+
+    def test_delete_unsuccess(self):
+        response = self.client.delete(reverse('courses/id', args=[2]))
+        self.assertEqual(response.status_code, 404)
+
+    def test_patch_success(self):
+        response = self.client.patch(self.url)
+        self.assertEqual(response.status_code, 200)
+
+    def test_patch_unsuccess(self):
+        response = self.client.get(self.url)
+        response.data['course_status'] = False
+        patch_record = self.client.patch(response)
+        self.assertEqual(patch_record.status_code, 404)
+
+
+class TestStudentDetails(TestCase):
+    def setUp(self):
+        self.client = Client()
+        self.url = reverse('student', args=[1])
+        self.data = Student.objects.create(
+            student_name='gayatri',
+            student_email='gayatri@example.com'
+        )
+        self.data_put_success = {
+            'student_name': 'gayatree',
+            'student_email': 'gayatri@example.com'
+        }
+        self.data_put_unsuccess_name = {
+            'student_name': 'gaya%$#',
+            'student_email': 'gayatri@example.com'
+        }
+        self.data_put_unsuccess_email = {
+            'student_name': 'gayatri',
+            'student_email': 'ga%$#&*tri@example.com'
+        }
+        self.data_put_no_data = {
+            'student_name': '',
+            'student_email': ''
+        }
+
+    def test_get_success(self):
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, 200)
+
+    def test_get_unsuccess(self):
+        response = self.client.get(reverse('student', args=[5]))
+        self.assertEqual(response.status_code, 404)
+
+    def test_put_success(self):
+        response = self.client.put(self.url, data=self.data_put_success, content_type='application/json')
+        self.assertEqual(response.status_code, 202)
+
+    def test_put_unsuccess_name(self):
+        response = self.client.put(self.url, data=self.data_put_unsuccess_name, content_type='application/json')
+        self.assertEqual(response.status_code, 406)
+
+    def test_put_unsuccess_email(self):
+        response = self.client.put(self.url, data=self.data_put_unsuccess_email, content_type='application/json')
+        self.assertEqual(response.status_code, 406)
+
+    def test_put_no_data(self):
+        response = self.client.put(self.url, data=self.data_put_no_data, content_type='application/json')
+        self.assertEqual(response.status_code, 406)
+
+    def test_delete_success(self):
+        response = self.client.delete(self.url)
+        self.assertEqual(response.status_code, 204)
+        self.assertFalse(Student.objects.filter(id=self.data.id).exists())
+
+    def test_delete_unsuccess(self):
+        response = self.client.delete(reverse('student', args=[2]))
+        self.assertEqual(response.status_code, 404)
+
+    def test_patch_success(self):
+        response = self.client.patch(self.url)
+        self.assertEqual(response.status_code, 204)
+
+    def test_patch_unsuccess(self):
+        response = self.client.get(self.url)
+        response.data['student_status'] = False
+        patch_record = self.client.patch(response)
+        self.assertEqual(patch_record.status_code, 404)
+
+
 class TestTeacherList(TestCase):
     def setUp(self):
         self.client = Client()
@@ -154,3 +281,73 @@ class TestTeacherList(TestCase):
     def test_post_no_email(self):
         response = self.client.post(self.url, data=self.no_email, format='json')
         self.assertEqual(response.status_code, 406)
+
+
+class TestTeacherDetails(TestCase):
+    def setUp(self):
+        self.client = Client()
+        self.url = reverse('teacher', args=[1])
+        self.data = Teacher.objects.create(
+            teacher_name='gayatri',
+            teacher_email='gayatri@example.com'
+        )
+        self.data_put_success = {
+            'teacher_name': 'gayatree',
+            'teacher_email': 'gayatri@example.com'
+        }
+        self.data_put_unsuccess_name = {
+            'teacher_name': 'gaya%$#',
+            'teacher_email': 'gayatri@example.com'
+        }
+        self.data_put_unsuccess_email = {
+            'teacher_name': 'gayatri',
+            'teacher_email': 'ga%$#&*tri@example.com'
+        }
+        self.data_put_no_data = {
+            'teacher_name': '',
+            'teacher_email': ''
+        }
+
+    def test_get_success(self):
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, 200)
+
+    def test_get_unsuccess(self):
+        response = self.client.get(reverse('teacher', args=[5]))
+        self.assertEqual(response.status_code, 404)
+
+    def test_put_success(self):
+        response = self.client.put(self.url, data=self.data_put_success, content_type='application/json')
+        self.assertEqual(response.status_code, 202)
+
+    def test_put_unsuccess_name(self):
+        response = self.client.put(self.url, data=self.data_put_unsuccess_name, content_type='application/json')
+        self.assertEqual(response.status_code, 406)
+
+    def test_put_unsuccess_email(self):
+        response = self.client.put(self.url, data=self.data_put_unsuccess_email, content_type='application/json')
+        self.assertEqual(response.status_code, 406)
+
+    def test_put_no_data(self):
+        response = self.client.put(self.url, data=self.data_put_no_data, content_type='application/json')
+        self.assertEqual(response.status_code, 406)
+
+    def test_delete_success(self):
+        response = self.client.delete(self.url)
+        self.assertEqual(response.status_code, 204)
+        self.assertFalse(Teacher.objects.filter(id=self.data.id).exists())
+
+    def test_delete_unsuccess(self):
+        response = self.client.delete(reverse('teacher', args=[2]))
+        self.assertEqual(response.status_code, 404)
+
+    def test_patch_success(self):
+        response = self.client.patch(self.url)
+        self.assertEqual(response.status_code, 204)
+
+    def test_patch_unsuccess(self):
+        response = self.client.get(self.url)
+        response.data['teacher_status'] = False
+        patch_record = self.client.patch(response)
+        self.assertEqual(patch_record.status_code, 404)
+

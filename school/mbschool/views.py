@@ -17,6 +17,7 @@ import logging
 logger = logging.getLogger('django')
 
 special_str = re.compile('[@_!#$%^&*()<>?\,;"/}|{~:0-9]')
+number_only = re.compile('[@_!#$%^&*()<>?\,;"/}|{~:a-zA-Z]')
 email_str = r"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
 
 
@@ -81,7 +82,7 @@ class StudentDetail(APIView):
 
         except ObjectDoesNotExist:
             logger.error('Record does not exist')
-            return Response({'Error': 'Record does not exist'})
+            return Response({'Error': 'Record does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as e:
             logger.error(f'An unexpected error occurred - {e}')
@@ -92,12 +93,21 @@ class StudentDetail(APIView):
     def put(self, request, pk):
         logger.info(f'Input - {pk} {request.data}')
         try:
+            if special_str.search(request.data['student_name']):
+                logger.error('Name should have characters only')
+                return Response({'Error': "Name should have characters only"}, status=status.HTTP_406_NOT_ACCEPTABLE)
+
+            if not re.match(email_str, request.data['student_email']):
+                logger.error('Invalid email id')
+                return Response({'Error': "Invalid email id"}, status=status.HTTP_406_NOT_ACCEPTABLE)
+
             student = Student.objects.get(pk=pk)
             serializer = StudentSerializer(student, data=request.data)
             if serializer.is_valid():
                 serializer.save()
                 return Response({'Student': serializer.data, 'Message': 'Record updated'},
                                 status=status.HTTP_202_ACCEPTED)
+
             else:
                 logger.error(f'Error - {serializer.errors}')
                 return Response({'Error': serializer.errors}, status=status.HTTP_406_NOT_ACCEPTABLE)
@@ -135,7 +145,8 @@ class StudentDetail(APIView):
             student = Student.objects.get(pk=pk)
             student.student_status = False
             student.save()
-            return Response({'Student': student}, status=status.HTTP_202_ACCEPTED)
+            serializer = StudentSerializer(student)
+            return Response({'Student': serializer.data}, status=status.HTTP_204_NO_CONTENT)
 
         except ObjectDoesNotExist:
             logger.error('Record does not exist')
@@ -159,7 +170,7 @@ class StudentCustom(APIView):
                 for course in request.data['courses']:
                     # assign_course = Course.objects.get(id=course)
                     student.courses.add(Course.objects.get(id=course))
-                return Response({'Message': 'Course assigned'})
+                return Response({'Message': 'Course assigned'}, status=status.HTTP_200_OK)
 
         except ObjectDoesNotExist:
             logger.error('Student does not exist')
@@ -238,6 +249,10 @@ class CourseDetail(APIView):
     def put(self, request, pk):
         logger.info(f'Input - {pk} {request.data}')
         try:
+            if special_str.search(request.data['course_name']):
+                logger.error("Name should have characters only")
+                return Response({'Error': "Name should have characters only"}, status=status.HTTP_406_NOT_ACCEPTABLE)
+
             course = Course.objects.get(pk=pk)
             serializer = CourseSerializer(course, data=request.data)
             if serializer.is_valid():
@@ -282,7 +297,8 @@ class CourseDetail(APIView):
             if course.course_status:
                 course.course_status = False
                 course.save()
-                return Response({'Courses': course, 'Message': 'Course deleted'}, status=status.HTTP_200_OK)
+                serializer = CourseSerializer(course)
+                return Response({'Courses': serializer.data, 'Message': 'Course deleted'}, status=status.HTTP_200_OK)
 
         except ObjectDoesNotExist:
             logger.error('Record not found')
@@ -365,6 +381,14 @@ class TeacherDetail(APIView):
     def put(self, request, pk):
         logger.info(f'Input - {pk} {request.data}')
         try:
+            if special_str.search(request.data['teacher_name']):
+                logger.error("Name should have characters only")
+                return Response({'Error': "Name should have characters only"}, status=status.HTTP_406_NOT_ACCEPTABLE)
+
+            if not re.match(email_str, request.data['teacher_email']):
+                logger.error("Invalid email id")
+                return Response({'Error': "Invalid email id"}, status=status.HTTP_406_NOT_ACCEPTABLE)
+
             teacher = Teacher.objects.get(pk=pk)
             serializer = TeacherSerializer(teacher, data=request.data)
             if serializer.is_valid():
@@ -410,7 +434,8 @@ class TeacherDetail(APIView):
             if teacher.teacher_status:
                 teacher.teacher_status = False
                 teacher.save()
-                return Response({'Message': 'Record deleted'}, status=status.HTTP_204_NO_CONTENT)
+                serializer = TeacherSerializer(teacher)
+                return Response({'Detail': serializer.data, 'Message': 'Record deleted'}, status=status.HTTP_204_NO_CONTENT)
 
         except ObjectDoesNotExist:
             logger.error('Record does not exist')
