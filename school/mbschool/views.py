@@ -168,8 +168,14 @@ class StudentCustom(APIView):
             student = Student.objects.get(id=request.data['id'])
             if student:
                 for course in request.data['courses']:
-                    # assign_course = Course.objects.get(id=course)
-                    student.courses.add(Course.objects.get(id=course))
+                    cors = Course.objects.get(id=course)
+                    if cors:
+                        # assign_course = Course.objects.get(id=course)
+                        student.courses.add(Course.objects.get(id=course))
+
+                    else:
+                        return Response({'Message': f'Course {course} does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
                 return Response({'Message': 'Course assigned'}, status=status.HTTP_200_OK)
 
         except ObjectDoesNotExist:
@@ -180,6 +186,23 @@ class StudentCustom(APIView):
             logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class SearchStudent(APIView):
+    def get(self, request):
+        logger.info(f'Input - {request.data}')
+        try:
+            student = Student.objects.filter(student_name__icontains=request.data['student_name'])
+            serializer = StudentSerializer(student, many=True)
+            return Response({'Students': serializer.data}, status=status.HTTP_200_OK)
+
+        except ObjectDoesNotExist:
+            logger.error('Student does not exist')
+            return Response({'Error': 'Student does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
+        except Exception as e:
+            logger.error(e)
+            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 # Course APIs
@@ -308,6 +331,23 @@ class CourseDetail(APIView):
             logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class SearchCourse(APIView):
+    def get(self, request):
+        logger.info(f'Input - {request.data}')
+        try:
+            course = Course.objects.filter(course_name__icontains=request.data['course_name'])
+            serializer = CourseSerializer(course, many=True)
+            return Response({'Courses': serializer.data}, status=status.HTTP_200_OK)
+
+        except ObjectDoesNotExist:
+            logger.error('Course does not exist')
+            return Response({'Error': 'Course does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
+        except Exception as e:
+            logger.error(e)
+            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 # Teacher APIs
@@ -457,9 +497,15 @@ class TeacherCustom(APIView):
             teacher = Teacher.objects.get(id=request.data['id'])
             if teacher:
                 for course in request.data['courses']:
-                    # assign_course = Course.objects.get(id=course)
-                    teacher.courses.add(Course.objects.get(id=course))
-                return Response({'Message': 'Course assigned'})
+                    cors = Course.objects.get(id=course)
+                    if cors:
+                        # assign_course = Course.objects.get(id=course)
+                        teacher.courses.add(Course.objects.get(id=course))
+
+                    else:
+                        return Response({'Message': f'Course {course} does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
+                return Response({'Message': 'Course assigned'}, status=status.HTTP_200_OK)
 
         except ObjectDoesNotExist:
             logger.error('Teacher does not exist')
@@ -469,6 +515,23 @@ class TeacherCustom(APIView):
             logger.error(f'An unexpected error occurred - {e}')
             return Response({'Error': f'An unexpected error occurred - {e}'},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class SearchTeacher(APIView):
+    def get(self, request):
+        logger.info(f'Input - {request.data}')
+        try:
+            teacher = Teacher.objects.filter(teacher_name__icontains=request.data['teacher_name'])
+            serializer = TeacherSerializer(teacher, many=True)
+            return Response({'Teachers': serializer.data}, status=status.HTTP_200_OK)
+
+        except ObjectDoesNotExist:
+            logger.error('Teacher does not exist')
+            return Response({'Error': 'Teacher does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
+        except Exception as e:
+            logger.error(e)
+            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class UserList(APIView):

@@ -351,3 +351,56 @@ class TestTeacherDetails(TestCase):
         patch_record = self.client.patch(response)
         self.assertEqual(patch_record.status_code, 404)
 
+
+class TestStudentCustom(TestCase):
+    def setUp(self):
+        self.url = reverse('studentcourse')
+        self.student = Student.objects.create(
+            student_name='ganga',
+            student_email='ganga@example.com'
+        )
+        self.course_data = [Course(course_name='python'), Course(course_name='java')]
+        Course.objects.bulk_create(self.course_data)
+
+        self.success_data = {'id': 1, 'courses': [1, 2]}
+        self.failure_data = {'id': 1, 'courses': [1, 3]}
+        self.no_student = {'id': 2, 'courses': [1, 2]}
+
+    def test_student_custom_success(self):
+        response = self.client.post(self.url, data=self.success_data, format='json')
+        self.assertEqual(response.status_code, 200)
+
+    def test_student_custom_fail(self):
+        response = self.client.post(self.url, data=self.failure_data, format='json')
+        self.assertEqual(response.status_code, 404)
+
+    def test_student_custom_no_student(self):
+        response = self.client.post(self.url, data=self.no_student, format='json')
+        self.assertEqual(response.status_code, 404)
+
+
+class TestTeacherCustom(TestCase):
+    def setUp(self):
+        self.url = reverse('teachercourse')
+        self.teacher = Teacher.objects.create(
+            teacher_name='ganga',
+            teacher_email='ganga@example.com'
+        )
+        self.course_data = [Course(course_name='python'), Course(course_name='java')]
+        Course.objects.bulk_create(self.course_data)
+
+        self.success_data = {'id': 1, 'courses': [1, 2]}
+        self.failure_data = {'id': 1, 'courses': [1, 3]}
+        self.no_teacher = {'id': 2, 'courses': [1, 2]}
+
+    def test_teacher_custom_success(self):
+        response = self.client.post(self.url, data=self.success_data, format='json')
+        self.assertEqual(response.status_code, 200)
+
+    def test_teacher_custom_fail(self):
+        response = self.client.post(self.url, data=self.failure_data, format='json')
+        self.assertEqual(response.status_code, 404)
+
+    def test_teacher_custom_no_student(self):
+        response = self.client.post(self.url, data=self.no_teacher, format='json')
+        self.assertEqual(response.status_code, 404)

@@ -42,3 +42,15 @@ class TestUrls(SimpleTestCase):
     def test_teacher_custom(self):
         url = reverse('teachercourse')
         self.assertEqual(resolve(url).func.view_class, TeacherCustom)
+
+    def test_search_teacher(self):
+        url = reverse('searchteacher')
+        self.assertEqual(resolve(url).func.view_class, SearchTeacher)
+
+    def test_search_student(self):
+        url = reverse('searchstudent')
+        self.assertEqual(resolve(url).func.view_class, SearchStudent)
+
+    def test_search_course(self):
+        url = reverse('searchcourse')
+        self.assertEqual(resolve(url).func.view_class, SearchCourse)

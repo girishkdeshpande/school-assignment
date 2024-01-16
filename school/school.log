@@ -6534,3 +6534,1245 @@ INFO 2024-01-16 19:16:27,103 views Input - <QueryDict: {'teacher_name': ['23456'
 ERROR 2024-01-16 19:16:27,103 views Name should have characters only
 WARNING 2024-01-16 19:16:27,103 log Not Acceptable: /mbschool/teachers/
 INFO 2024-01-16 19:16:27,104 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['goga@example.com']}>
+INFO 2024-01-16 22:52:47,360 views Input - 1
+INFO 2024-01-16 22:52:47,365 views Input - 2
+ERROR 2024-01-16 22:52:47,366 views Record not found
+WARNING 2024-01-16 22:52:47,366 log Not Found: /mbschool/courses/2
+INFO 2024-01-16 22:52:47,368 views Input - 1
+INFO 2024-01-16 22:52:47,372 views Input - 2
+ERROR 2024-01-16 22:52:47,372 views Record not found
+WARNING 2024-01-16 22:52:47,373 log Not Found: /mbschool/courses/2
+INFO 2024-01-16 22:52:47,374 views Input - 1
+INFO 2024-01-16 22:52:47,379 views Input - 1
+WARNING 2024-01-16 22:52:47,393 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 22:52:47,395 views Input - 1 {'course_name': ''}
+ERROR 2024-01-16 22:52:47,396 views Error - {'course_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 22:52:47,396 log Bad Request: /mbschool/courses/1
+INFO 2024-01-16 22:52:47,399 views Input - 1 {'course_name': 'python with react'}
+INFO 2024-01-16 22:52:47,403 views Input - 1 {'course_name': 'python 3.11.5'}
+ERROR 2024-01-16 22:52:47,403 views Name should have characters only
+WARNING 2024-01-16 22:52:47,403 log Not Acceptable: /mbschool/courses/1
+INFO 2024-01-16 22:52:47,407 views Input - <QueryDict: {'course_name': ['azure']}>
+INFO 2024-01-16 22:52:47,412 views Input - <QueryDict: {'course_name': ['*&^%$#@']}>
+ERROR 2024-01-16 22:52:47,412 views Name should have characters only
+WARNING 2024-01-16 22:52:47,412 log Not Acceptable: /mbschool/courses/
+INFO 2024-01-16 22:52:47,486 views Input - 1
+INFO 2024-01-16 22:52:47,493 views Input - 2
+ERROR 2024-01-16 22:52:47,495 views Record does not exist
+WARNING 2024-01-16 22:52:47,495 log Not Found: /mbschool/students/2
+INFO 2024-01-16 22:52:47,498 views Input - 1
+INFO 2024-01-16 22:52:47,506 views Input - 5
+ERROR 2024-01-16 22:52:47,507 views Record does not exist
+WARNING 2024-01-16 22:52:47,507 log Not Found: /mbschool/students/5
+INFO 2024-01-16 22:52:47,510 views Input - 1
+INFO 2024-01-16 22:52:47,515 views Input - 1
+WARNING 2024-01-16 22:52:47,519 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 22:52:47,525 views Input - 1 {'student_name': '', 'student_email': ''}
+ERROR 2024-01-16 22:52:47,526 views Invalid email id
+WARNING 2024-01-16 22:52:47,526 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 22:52:47,529 views Input - 1 {'student_name': 'gayatree', 'student_email': 'gayatri@example.com'}
+INFO 2024-01-16 22:52:47,541 views Input - 1 {'student_name': 'gayatri', 'student_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-16 22:52:47,542 views Invalid email id
+WARNING 2024-01-16 22:52:47,542 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 22:52:47,545 views Input - 1 {'student_name': 'gaya%$#', 'student_email': 'gayatri@example.com'}
+ERROR 2024-01-16 22:52:47,545 views Name should have characters only
+WARNING 2024-01-16 22:52:47,546 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 22:52:47,553 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:52:47,553 views Invalid email id
+WARNING 2024-01-16 22:52:47,554 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:52:47,559 views Input - <QueryDict: {'student_name': ['*&^%$#@!'], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-16 22:52:47,559 views Name should have characters only
+WARNING 2024-01-16 22:52:47,559 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:52:47,563 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['']}>
+ERROR 2024-01-16 22:52:47,563 views Invalid email id
+WARNING 2024-01-16 22:52:47,564 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:52:47,566 views Input - <QueryDict: {'student_name': [''], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-16 22:52:47,570 views Error - {'student_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 22:52:47,570 log Bad Request: /mbschool/students/
+INFO 2024-01-16 22:52:47,574 views Input - <QueryDict: {'student_name': ['23456'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:52:47,574 views Name should have characters only
+WARNING 2024-01-16 22:52:47,575 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:52:47,578 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['gogo@example.com']}>
+INFO 2024-01-16 22:52:47,583 views Saved record - {'id': 1, 'student_name': 'gogo', 'student_email': 'gogo@example.com', 'enrolled_year': '2024-01-16', 'student_status': False, 'courses': []}
+INFO 2024-01-16 22:52:47,587 views Input - 1
+INFO 2024-01-16 22:52:47,595 views Input - 2
+ERROR 2024-01-16 22:52:47,597 views Record does not exist
+WARNING 2024-01-16 22:52:47,597 log Not Found: /mbschool/teachers/2
+INFO 2024-01-16 22:52:47,600 views Input - 1
+INFO 2024-01-16 22:52:47,607 views Input - 5
+ERROR 2024-01-16 22:52:47,609 views Record does not exist
+WARNING 2024-01-16 22:52:47,609 log Not Found: /mbschool/teachers/5
+INFO 2024-01-16 22:52:47,612 views Input - 1
+INFO 2024-01-16 22:52:47,617 views Input - 1
+WARNING 2024-01-16 22:52:47,620 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 22:52:47,622 views Input - 1 {'teacher_name': '', 'teacher_email': ''}
+ERROR 2024-01-16 22:52:47,622 views Invalid email id
+WARNING 2024-01-16 22:52:47,622 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 22:52:47,624 views Input - 1 {'teacher_name': 'gayatree', 'teacher_email': 'gayatri@example.com'}
+INFO 2024-01-16 22:52:47,629 views Input - 1 {'teacher_name': 'gayatri', 'teacher_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-16 22:52:47,629 views Invalid email id
+WARNING 2024-01-16 22:52:47,629 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 22:52:47,631 views Input - 1 {'teacher_name': 'gaya%$#', 'teacher_email': 'gayatri@example.com'}
+ERROR 2024-01-16 22:52:47,631 views Name should have characters only
+WARNING 2024-01-16 22:52:47,631 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 22:52:47,635 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:52:47,635 views Invalid email id
+WARNING 2024-01-16 22:52:47,635 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:52:47,637 views Input - <QueryDict: {'teacher_name': ['*&^%$#@!'], 'teacher_email': ['goga@example.com']}>
+ERROR 2024-01-16 22:52:47,637 views Name should have characters only
+WARNING 2024-01-16 22:52:47,637 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:52:47,638 views Input - <QueryDict: {'teacher_name': ['gogo'], 'teacher_email': ['']}>
+ERROR 2024-01-16 22:52:47,638 views Invalid email id
+WARNING 2024-01-16 22:52:47,639 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:52:47,640 views Input - <QueryDict: {'teacher_name': [''], 'teacher_email': ['gogo@example.com']}>
+ERROR 2024-01-16 22:52:47,642 views Error - {'teacher_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 22:52:47,642 log Bad Request: /mbschool/teachers/
+INFO 2024-01-16 22:52:47,644 views Input - <QueryDict: {'teacher_name': ['23456'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:52:47,644 views Name should have characters only
+WARNING 2024-01-16 22:52:47,644 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:52:47,646 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['goga@example.com']}>
+INFO 2024-01-16 22:53:10,861 views Input - 1
+INFO 2024-01-16 22:53:10,865 views Input - 2
+ERROR 2024-01-16 22:53:10,865 views Record not found
+WARNING 2024-01-16 22:53:10,866 log Not Found: /mbschool/courses/2
+INFO 2024-01-16 22:53:10,867 views Input - 1
+INFO 2024-01-16 22:53:10,871 views Input - 2
+ERROR 2024-01-16 22:53:10,871 views Record not found
+WARNING 2024-01-16 22:53:10,871 log Not Found: /mbschool/courses/2
+INFO 2024-01-16 22:53:10,874 views Input - 1
+INFO 2024-01-16 22:53:10,877 views Input - 1
+WARNING 2024-01-16 22:53:10,884 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 22:53:10,887 views Input - 1 {'course_name': ''}
+ERROR 2024-01-16 22:53:10,888 views Error - {'course_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 22:53:10,888 log Bad Request: /mbschool/courses/1
+INFO 2024-01-16 22:53:10,890 views Input - 1 {'course_name': 'python with react'}
+INFO 2024-01-16 22:53:10,894 views Input - 1 {'course_name': 'python 3.11.5'}
+ERROR 2024-01-16 22:53:10,894 views Name should have characters only
+WARNING 2024-01-16 22:53:10,894 log Not Acceptable: /mbschool/courses/1
+INFO 2024-01-16 22:53:10,897 views Input - <QueryDict: {'course_name': ['azure']}>
+INFO 2024-01-16 22:53:10,901 views Input - <QueryDict: {'course_name': ['*&^%$#@']}>
+ERROR 2024-01-16 22:53:10,901 views Name should have characters only
+WARNING 2024-01-16 22:53:10,901 log Not Acceptable: /mbschool/courses/
+INFO 2024-01-16 22:53:10,905 views Input - <QueryDict: {'student_id': ['1'], 'courses': ['1', '2']}>
+ERROR 2024-01-16 22:53:10,905 views An unexpected error occurred - 'id'
+ERROR 2024-01-16 22:53:10,905 log Internal Server Error: /mbschool/studentcourse/
+INFO 2024-01-16 22:53:10,907 views Input - 1
+INFO 2024-01-16 22:53:10,910 views Input - 2
+ERROR 2024-01-16 22:53:10,911 views Record does not exist
+WARNING 2024-01-16 22:53:10,911 log Not Found: /mbschool/students/2
+INFO 2024-01-16 22:53:10,912 views Input - 1
+INFO 2024-01-16 22:53:10,916 views Input - 5
+ERROR 2024-01-16 22:53:10,916 views Record does not exist
+WARNING 2024-01-16 22:53:10,917 log Not Found: /mbschool/students/5
+INFO 2024-01-16 22:53:10,919 views Input - 1
+INFO 2024-01-16 22:53:10,922 views Input - 1
+WARNING 2024-01-16 22:53:10,926 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 22:53:10,928 views Input - 1 {'student_name': '', 'student_email': ''}
+ERROR 2024-01-16 22:53:10,928 views Invalid email id
+WARNING 2024-01-16 22:53:10,928 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 22:53:10,930 views Input - 1 {'student_name': 'gayatree', 'student_email': 'gayatri@example.com'}
+INFO 2024-01-16 22:53:10,936 views Input - 1 {'student_name': 'gayatri', 'student_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-16 22:53:10,936 views Invalid email id
+WARNING 2024-01-16 22:53:10,936 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 22:53:10,938 views Input - 1 {'student_name': 'gaya%$#', 'student_email': 'gayatri@example.com'}
+ERROR 2024-01-16 22:53:10,938 views Name should have characters only
+WARNING 2024-01-16 22:53:10,938 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 22:53:10,942 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:53:10,942 views Invalid email id
+WARNING 2024-01-16 22:53:10,942 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:53:10,944 views Input - <QueryDict: {'student_name': ['*&^%$#@!'], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-16 22:53:10,944 views Name should have characters only
+WARNING 2024-01-16 22:53:10,944 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:53:10,945 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['']}>
+ERROR 2024-01-16 22:53:10,945 views Invalid email id
+WARNING 2024-01-16 22:53:10,945 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:53:10,947 views Input - <QueryDict: {'student_name': [''], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-16 22:53:10,948 views Error - {'student_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 22:53:10,948 log Bad Request: /mbschool/students/
+INFO 2024-01-16 22:53:10,950 views Input - <QueryDict: {'student_name': ['23456'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:53:10,950 views Name should have characters only
+WARNING 2024-01-16 22:53:10,950 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:53:10,952 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['gogo@example.com']}>
+INFO 2024-01-16 22:53:10,955 views Saved record - {'id': 1, 'student_name': 'gogo', 'student_email': 'gogo@example.com', 'enrolled_year': '2024-01-16', 'student_status': False, 'courses': []}
+INFO 2024-01-16 22:53:10,957 views Input - 1
+INFO 2024-01-16 22:53:10,960 views Input - 2
+ERROR 2024-01-16 22:53:10,960 views Record does not exist
+WARNING 2024-01-16 22:53:10,960 log Not Found: /mbschool/teachers/2
+INFO 2024-01-16 22:53:10,962 views Input - 1
+INFO 2024-01-16 22:53:10,965 views Input - 5
+ERROR 2024-01-16 22:53:10,965 views Record does not exist
+WARNING 2024-01-16 22:53:10,965 log Not Found: /mbschool/teachers/5
+INFO 2024-01-16 22:53:10,967 views Input - 1
+INFO 2024-01-16 22:53:10,971 views Input - 1
+WARNING 2024-01-16 22:53:10,974 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 22:53:10,976 views Input - 1 {'teacher_name': '', 'teacher_email': ''}
+ERROR 2024-01-16 22:53:10,976 views Invalid email id
+WARNING 2024-01-16 22:53:10,976 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 22:53:10,978 views Input - 1 {'teacher_name': 'gayatree', 'teacher_email': 'gayatri@example.com'}
+INFO 2024-01-16 22:53:10,981 views Input - 1 {'teacher_name': 'gayatri', 'teacher_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-16 22:53:10,981 views Invalid email id
+WARNING 2024-01-16 22:53:10,981 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 22:53:10,983 views Input - 1 {'teacher_name': 'gaya%$#', 'teacher_email': 'gayatri@example.com'}
+ERROR 2024-01-16 22:53:10,983 views Name should have characters only
+WARNING 2024-01-16 22:53:10,983 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 22:53:10,988 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:53:10,988 views Invalid email id
+WARNING 2024-01-16 22:53:10,988 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:53:10,989 views Input - <QueryDict: {'teacher_name': ['*&^%$#@!'], 'teacher_email': ['goga@example.com']}>
+ERROR 2024-01-16 22:53:10,990 views Name should have characters only
+WARNING 2024-01-16 22:53:10,990 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:53:10,991 views Input - <QueryDict: {'teacher_name': ['gogo'], 'teacher_email': ['']}>
+ERROR 2024-01-16 22:53:10,991 views Invalid email id
+WARNING 2024-01-16 22:53:10,991 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:53:10,993 views Input - <QueryDict: {'teacher_name': [''], 'teacher_email': ['gogo@example.com']}>
+ERROR 2024-01-16 22:53:10,994 views Error - {'teacher_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 22:53:10,994 log Bad Request: /mbschool/teachers/
+INFO 2024-01-16 22:53:10,996 views Input - <QueryDict: {'teacher_name': ['23456'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:53:10,996 views Name should have characters only
+WARNING 2024-01-16 22:53:10,996 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:53:10,998 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['goga@example.com']}>
+INFO 2024-01-16 22:53:50,898 autoreload Watching for file changes with StatReloader
+INFO 2024-01-16 22:57:04,426 views Input - {'id': 1, 'courses': [3, 4]}
+INFO 2024-01-16 22:57:04,451 basehttp "POST /mbschool/studentcourse/ HTTP/1.1" 200 29
+INFO 2024-01-16 22:57:25,540 views Input - 1
+INFO 2024-01-16 22:57:25,544 views Input - 2
+ERROR 2024-01-16 22:57:25,544 views Record not found
+WARNING 2024-01-16 22:57:25,544 log Not Found: /mbschool/courses/2
+INFO 2024-01-16 22:57:25,546 views Input - 1
+INFO 2024-01-16 22:57:25,550 views Input - 2
+ERROR 2024-01-16 22:57:25,550 views Record not found
+WARNING 2024-01-16 22:57:25,550 log Not Found: /mbschool/courses/2
+INFO 2024-01-16 22:57:25,552 views Input - 1
+INFO 2024-01-16 22:57:25,555 views Input - 1
+WARNING 2024-01-16 22:57:25,562 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 22:57:25,564 views Input - 1 {'course_name': ''}
+ERROR 2024-01-16 22:57:25,565 views Error - {'course_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 22:57:25,565 log Bad Request: /mbschool/courses/1
+INFO 2024-01-16 22:57:25,567 views Input - 1 {'course_name': 'python with react'}
+INFO 2024-01-16 22:57:25,571 views Input - 1 {'course_name': 'python 3.11.5'}
+ERROR 2024-01-16 22:57:25,571 views Name should have characters only
+WARNING 2024-01-16 22:57:25,571 log Not Acceptable: /mbschool/courses/1
+INFO 2024-01-16 22:57:25,575 views Input - <QueryDict: {'course_name': ['azure']}>
+INFO 2024-01-16 22:57:25,579 views Input - <QueryDict: {'course_name': ['*&^%$#@']}>
+ERROR 2024-01-16 22:57:25,579 views Name should have characters only
+WARNING 2024-01-16 22:57:25,579 log Not Acceptable: /mbschool/courses/
+INFO 2024-01-16 22:57:25,581 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '2']}>
+INFO 2024-01-16 22:57:25,585 views Input - 1
+INFO 2024-01-16 22:57:25,588 views Input - 2
+ERROR 2024-01-16 22:57:25,588 views Record does not exist
+WARNING 2024-01-16 22:57:25,588 log Not Found: /mbschool/students/2
+INFO 2024-01-16 22:57:25,589 views Input - 1
+INFO 2024-01-16 22:57:25,593 views Input - 5
+ERROR 2024-01-16 22:57:25,593 views Record does not exist
+WARNING 2024-01-16 22:57:25,594 log Not Found: /mbschool/students/5
+INFO 2024-01-16 22:57:25,596 views Input - 1
+INFO 2024-01-16 22:57:25,599 views Input - 1
+WARNING 2024-01-16 22:57:25,602 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 22:57:25,604 views Input - 1 {'student_name': '', 'student_email': ''}
+ERROR 2024-01-16 22:57:25,604 views Invalid email id
+WARNING 2024-01-16 22:57:25,604 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 22:57:25,607 views Input - 1 {'student_name': 'gayatree', 'student_email': 'gayatri@example.com'}
+INFO 2024-01-16 22:57:25,612 views Input - 1 {'student_name': 'gayatri', 'student_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-16 22:57:25,612 views Invalid email id
+WARNING 2024-01-16 22:57:25,613 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 22:57:25,614 views Input - 1 {'student_name': 'gaya%$#', 'student_email': 'gayatri@example.com'}
+ERROR 2024-01-16 22:57:25,614 views Name should have characters only
+WARNING 2024-01-16 22:57:25,615 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 22:57:25,618 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:57:25,619 views Invalid email id
+WARNING 2024-01-16 22:57:25,619 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:57:25,620 views Input - <QueryDict: {'student_name': ['*&^%$#@!'], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-16 22:57:25,620 views Name should have characters only
+WARNING 2024-01-16 22:57:25,620 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:57:25,621 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['']}>
+ERROR 2024-01-16 22:57:25,621 views Invalid email id
+WARNING 2024-01-16 22:57:25,621 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:57:25,623 views Input - <QueryDict: {'student_name': [''], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-16 22:57:25,624 views Error - {'student_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 22:57:25,624 log Bad Request: /mbschool/students/
+INFO 2024-01-16 22:57:25,626 views Input - <QueryDict: {'student_name': ['23456'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:57:25,626 views Name should have characters only
+WARNING 2024-01-16 22:57:25,626 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:57:25,627 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['gogo@example.com']}>
+INFO 2024-01-16 22:57:25,629 views Saved record - {'id': 1, 'student_name': 'gogo', 'student_email': 'gogo@example.com', 'enrolled_year': '2024-01-16', 'student_status': False, 'courses': []}
+INFO 2024-01-16 22:57:25,631 views Input - 1
+INFO 2024-01-16 22:57:25,635 views Input - 2
+ERROR 2024-01-16 22:57:25,635 views Record does not exist
+WARNING 2024-01-16 22:57:25,636 log Not Found: /mbschool/teachers/2
+INFO 2024-01-16 22:57:25,638 views Input - 1
+INFO 2024-01-16 22:57:25,643 views Input - 5
+ERROR 2024-01-16 22:57:25,643 views Record does not exist
+WARNING 2024-01-16 22:57:25,644 log Not Found: /mbschool/teachers/5
+INFO 2024-01-16 22:57:25,646 views Input - 1
+INFO 2024-01-16 22:57:25,650 views Input - 1
+WARNING 2024-01-16 22:57:25,654 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 22:57:25,656 views Input - 1 {'teacher_name': '', 'teacher_email': ''}
+ERROR 2024-01-16 22:57:25,657 views Invalid email id
+WARNING 2024-01-16 22:57:25,657 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 22:57:25,659 views Input - 1 {'teacher_name': 'gayatree', 'teacher_email': 'gayatri@example.com'}
+INFO 2024-01-16 22:57:25,665 views Input - 1 {'teacher_name': 'gayatri', 'teacher_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-16 22:57:25,665 views Invalid email id
+WARNING 2024-01-16 22:57:25,665 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 22:57:25,668 views Input - 1 {'teacher_name': 'gaya%$#', 'teacher_email': 'gayatri@example.com'}
+ERROR 2024-01-16 22:57:25,668 views Name should have characters only
+WARNING 2024-01-16 22:57:25,668 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 22:57:25,671 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:57:25,671 views Invalid email id
+WARNING 2024-01-16 22:57:25,672 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:57:25,673 views Input - <QueryDict: {'teacher_name': ['*&^%$#@!'], 'teacher_email': ['goga@example.com']}>
+ERROR 2024-01-16 22:57:25,673 views Name should have characters only
+WARNING 2024-01-16 22:57:25,673 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:57:25,675 views Input - <QueryDict: {'teacher_name': ['gogo'], 'teacher_email': ['']}>
+ERROR 2024-01-16 22:57:25,675 views Invalid email id
+WARNING 2024-01-16 22:57:25,675 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:57:25,677 views Input - <QueryDict: {'teacher_name': [''], 'teacher_email': ['gogo@example.com']}>
+ERROR 2024-01-16 22:57:25,678 views Error - {'teacher_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 22:57:25,678 log Bad Request: /mbschool/teachers/
+INFO 2024-01-16 22:57:25,680 views Input - <QueryDict: {'teacher_name': ['23456'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:57:25,680 views Name should have characters only
+WARNING 2024-01-16 22:57:25,680 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:57:25,681 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['goga@example.com']}>
+INFO 2024-01-16 22:59:26,898 views Input - 1
+INFO 2024-01-16 22:59:26,907 views Input - 2
+ERROR 2024-01-16 22:59:26,908 views Record not found
+WARNING 2024-01-16 22:59:26,909 log Not Found: /mbschool/courses/2
+INFO 2024-01-16 22:59:26,913 views Input - 1
+INFO 2024-01-16 22:59:26,922 views Input - 2
+ERROR 2024-01-16 22:59:26,923 views Record not found
+WARNING 2024-01-16 22:59:26,924 log Not Found: /mbschool/courses/2
+INFO 2024-01-16 22:59:26,927 views Input - 1
+INFO 2024-01-16 22:59:26,934 views Input - 1
+WARNING 2024-01-16 22:59:26,945 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 22:59:26,947 views Input - 1 {'course_name': ''}
+ERROR 2024-01-16 22:59:26,948 views Error - {'course_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 22:59:26,948 log Bad Request: /mbschool/courses/1
+INFO 2024-01-16 22:59:26,950 views Input - 1 {'course_name': 'python with react'}
+INFO 2024-01-16 22:59:26,955 views Input - 1 {'course_name': 'python 3.11.5'}
+ERROR 2024-01-16 22:59:26,955 views Name should have characters only
+WARNING 2024-01-16 22:59:26,955 log Not Acceptable: /mbschool/courses/1
+INFO 2024-01-16 22:59:26,958 views Input - <QueryDict: {'course_name': ['azure']}>
+INFO 2024-01-16 22:59:26,962 views Input - <QueryDict: {'course_name': ['*&^%$#@']}>
+ERROR 2024-01-16 22:59:26,963 views Name should have characters only
+WARNING 2024-01-16 22:59:26,963 log Not Acceptable: /mbschool/courses/
+INFO 2024-01-16 22:59:26,966 views Input - <QueryDict: {'id': ['1'], 'courses': ['4', '3']}>
+ERROR 2024-01-16 22:59:26,966 views Student does not exist
+WARNING 2024-01-16 22:59:26,967 log Not Found: /mbschool/studentcourse/
+INFO 2024-01-16 22:59:26,969 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '2']}>
+INFO 2024-01-16 22:59:26,972 views Input - 1
+INFO 2024-01-16 22:59:26,975 views Input - 2
+ERROR 2024-01-16 22:59:26,976 views Record does not exist
+WARNING 2024-01-16 22:59:26,976 log Not Found: /mbschool/students/2
+INFO 2024-01-16 22:59:26,978 views Input - 1
+INFO 2024-01-16 22:59:26,982 views Input - 5
+ERROR 2024-01-16 22:59:26,982 views Record does not exist
+WARNING 2024-01-16 22:59:26,983 log Not Found: /mbschool/students/5
+INFO 2024-01-16 22:59:26,984 views Input - 1
+INFO 2024-01-16 22:59:26,988 views Input - 1
+WARNING 2024-01-16 22:59:26,991 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 22:59:26,992 views Input - 1 {'student_name': '', 'student_email': ''}
+ERROR 2024-01-16 22:59:26,993 views Invalid email id
+WARNING 2024-01-16 22:59:26,993 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 22:59:26,995 views Input - 1 {'student_name': 'gayatree', 'student_email': 'gayatri@example.com'}
+INFO 2024-01-16 22:59:27,002 views Input - 1 {'student_name': 'gayatri', 'student_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-16 22:59:27,002 views Invalid email id
+WARNING 2024-01-16 22:59:27,002 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 22:59:27,004 views Input - 1 {'student_name': 'gaya%$#', 'student_email': 'gayatri@example.com'}
+ERROR 2024-01-16 22:59:27,004 views Name should have characters only
+WARNING 2024-01-16 22:59:27,004 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 22:59:27,007 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:59:27,007 views Invalid email id
+WARNING 2024-01-16 22:59:27,007 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:59:27,009 views Input - <QueryDict: {'student_name': ['*&^%$#@!'], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-16 22:59:27,009 views Name should have characters only
+WARNING 2024-01-16 22:59:27,009 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:59:27,010 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['']}>
+ERROR 2024-01-16 22:59:27,011 views Invalid email id
+WARNING 2024-01-16 22:59:27,011 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:59:27,013 views Input - <QueryDict: {'student_name': [''], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-16 22:59:27,014 views Error - {'student_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 22:59:27,014 log Bad Request: /mbschool/students/
+INFO 2024-01-16 22:59:27,016 views Input - <QueryDict: {'student_name': ['23456'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:59:27,016 views Name should have characters only
+WARNING 2024-01-16 22:59:27,016 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:59:27,018 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['gogo@example.com']}>
+INFO 2024-01-16 22:59:27,020 views Saved record - {'id': 1, 'student_name': 'gogo', 'student_email': 'gogo@example.com', 'enrolled_year': '2024-01-16', 'student_status': False, 'courses': []}
+INFO 2024-01-16 22:59:27,022 views Input - 1
+INFO 2024-01-16 22:59:27,025 views Input - 2
+ERROR 2024-01-16 22:59:27,026 views Record does not exist
+WARNING 2024-01-16 22:59:27,026 log Not Found: /mbschool/teachers/2
+INFO 2024-01-16 22:59:27,027 views Input - 1
+INFO 2024-01-16 22:59:27,031 views Input - 5
+ERROR 2024-01-16 22:59:27,031 views Record does not exist
+WARNING 2024-01-16 22:59:27,032 log Not Found: /mbschool/teachers/5
+INFO 2024-01-16 22:59:27,033 views Input - 1
+INFO 2024-01-16 22:59:27,036 views Input - 1
+WARNING 2024-01-16 22:59:27,038 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 22:59:27,039 views Input - 1 {'teacher_name': '', 'teacher_email': ''}
+ERROR 2024-01-16 22:59:27,039 views Invalid email id
+WARNING 2024-01-16 22:59:27,040 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 22:59:27,041 views Input - 1 {'teacher_name': 'gayatree', 'teacher_email': 'gayatri@example.com'}
+INFO 2024-01-16 22:59:27,045 views Input - 1 {'teacher_name': 'gayatri', 'teacher_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-16 22:59:27,046 views Invalid email id
+WARNING 2024-01-16 22:59:27,046 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 22:59:27,047 views Input - 1 {'teacher_name': 'gaya%$#', 'teacher_email': 'gayatri@example.com'}
+ERROR 2024-01-16 22:59:27,047 views Name should have characters only
+WARNING 2024-01-16 22:59:27,048 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 22:59:27,051 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:59:27,051 views Invalid email id
+WARNING 2024-01-16 22:59:27,051 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:59:27,052 views Input - <QueryDict: {'teacher_name': ['*&^%$#@!'], 'teacher_email': ['goga@example.com']}>
+ERROR 2024-01-16 22:59:27,052 views Name should have characters only
+WARNING 2024-01-16 22:59:27,052 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:59:27,054 views Input - <QueryDict: {'teacher_name': ['gogo'], 'teacher_email': ['']}>
+ERROR 2024-01-16 22:59:27,054 views Invalid email id
+WARNING 2024-01-16 22:59:27,054 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:59:27,055 views Input - <QueryDict: {'teacher_name': [''], 'teacher_email': ['gogo@example.com']}>
+ERROR 2024-01-16 22:59:27,056 views Error - {'teacher_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 22:59:27,057 log Bad Request: /mbschool/teachers/
+INFO 2024-01-16 22:59:27,058 views Input - <QueryDict: {'teacher_name': ['23456'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:59:27,059 views Name should have characters only
+WARNING 2024-01-16 22:59:27,059 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:59:27,060 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['goga@example.com']}>
+INFO 2024-01-16 22:59:39,848 views Input - 1
+INFO 2024-01-16 22:59:39,855 views Input - 2
+ERROR 2024-01-16 22:59:39,855 views Record not found
+WARNING 2024-01-16 22:59:39,856 log Not Found: /mbschool/courses/2
+INFO 2024-01-16 22:59:39,858 views Input - 1
+INFO 2024-01-16 22:59:39,862 views Input - 2
+ERROR 2024-01-16 22:59:39,863 views Record not found
+WARNING 2024-01-16 22:59:39,863 log Not Found: /mbschool/courses/2
+INFO 2024-01-16 22:59:39,865 views Input - 1
+INFO 2024-01-16 22:59:39,869 views Input - 1
+WARNING 2024-01-16 22:59:39,877 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 22:59:39,879 views Input - 1 {'course_name': ''}
+ERROR 2024-01-16 22:59:39,880 views Error - {'course_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 22:59:39,880 log Bad Request: /mbschool/courses/1
+INFO 2024-01-16 22:59:39,882 views Input - 1 {'course_name': 'python with react'}
+INFO 2024-01-16 22:59:39,886 views Input - 1 {'course_name': 'python 3.11.5'}
+ERROR 2024-01-16 22:59:39,887 views Name should have characters only
+WARNING 2024-01-16 22:59:39,887 log Not Acceptable: /mbschool/courses/1
+INFO 2024-01-16 22:59:39,890 views Input - <QueryDict: {'course_name': ['azure']}>
+INFO 2024-01-16 22:59:39,893 views Input - <QueryDict: {'course_name': ['*&^%$#@']}>
+ERROR 2024-01-16 22:59:39,893 views Name should have characters only
+WARNING 2024-01-16 22:59:39,893 log Not Acceptable: /mbschool/courses/
+INFO 2024-01-16 22:59:39,896 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '3']}>
+ERROR 2024-01-16 22:59:39,896 views Student does not exist
+WARNING 2024-01-16 22:59:39,897 log Not Found: /mbschool/studentcourse/
+INFO 2024-01-16 22:59:39,899 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '2']}>
+INFO 2024-01-16 22:59:39,903 views Input - 1
+INFO 2024-01-16 22:59:39,907 views Input - 2
+ERROR 2024-01-16 22:59:39,907 views Record does not exist
+WARNING 2024-01-16 22:59:39,907 log Not Found: /mbschool/students/2
+INFO 2024-01-16 22:59:39,909 views Input - 1
+INFO 2024-01-16 22:59:39,912 views Input - 5
+ERROR 2024-01-16 22:59:39,912 views Record does not exist
+WARNING 2024-01-16 22:59:39,912 log Not Found: /mbschool/students/5
+INFO 2024-01-16 22:59:39,914 views Input - 1
+INFO 2024-01-16 22:59:39,918 views Input - 1
+WARNING 2024-01-16 22:59:39,922 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 22:59:39,924 views Input - 1 {'student_name': '', 'student_email': ''}
+ERROR 2024-01-16 22:59:39,924 views Invalid email id
+WARNING 2024-01-16 22:59:39,924 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 22:59:39,926 views Input - 1 {'student_name': 'gayatree', 'student_email': 'gayatri@example.com'}
+INFO 2024-01-16 22:59:39,931 views Input - 1 {'student_name': 'gayatri', 'student_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-16 22:59:39,932 views Invalid email id
+WARNING 2024-01-16 22:59:39,932 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 22:59:39,934 views Input - 1 {'student_name': 'gaya%$#', 'student_email': 'gayatri@example.com'}
+ERROR 2024-01-16 22:59:39,934 views Name should have characters only
+WARNING 2024-01-16 22:59:39,934 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 22:59:39,937 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:59:39,937 views Invalid email id
+WARNING 2024-01-16 22:59:39,937 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:59:39,939 views Input - <QueryDict: {'student_name': ['*&^%$#@!'], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-16 22:59:39,939 views Name should have characters only
+WARNING 2024-01-16 22:59:39,939 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:59:39,941 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['']}>
+ERROR 2024-01-16 22:59:39,941 views Invalid email id
+WARNING 2024-01-16 22:59:39,941 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:59:39,942 views Input - <QueryDict: {'student_name': [''], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-16 22:59:39,943 views Error - {'student_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 22:59:39,943 log Bad Request: /mbschool/students/
+INFO 2024-01-16 22:59:39,945 views Input - <QueryDict: {'student_name': ['23456'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:59:39,945 views Name should have characters only
+WARNING 2024-01-16 22:59:39,945 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 22:59:39,947 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['gogo@example.com']}>
+INFO 2024-01-16 22:59:39,949 views Saved record - {'id': 1, 'student_name': 'gogo', 'student_email': 'gogo@example.com', 'enrolled_year': '2024-01-16', 'student_status': False, 'courses': []}
+INFO 2024-01-16 22:59:39,951 views Input - 1
+INFO 2024-01-16 22:59:39,955 views Input - 2
+ERROR 2024-01-16 22:59:39,955 views Record does not exist
+WARNING 2024-01-16 22:59:39,956 log Not Found: /mbschool/teachers/2
+INFO 2024-01-16 22:59:39,958 views Input - 1
+INFO 2024-01-16 22:59:39,960 views Input - 5
+ERROR 2024-01-16 22:59:39,961 views Record does not exist
+WARNING 2024-01-16 22:59:39,961 log Not Found: /mbschool/teachers/5
+INFO 2024-01-16 22:59:39,963 views Input - 1
+INFO 2024-01-16 22:59:39,966 views Input - 1
+WARNING 2024-01-16 22:59:39,968 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 22:59:39,970 views Input - 1 {'teacher_name': '', 'teacher_email': ''}
+ERROR 2024-01-16 22:59:39,970 views Invalid email id
+WARNING 2024-01-16 22:59:39,970 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 22:59:39,971 views Input - 1 {'teacher_name': 'gayatree', 'teacher_email': 'gayatri@example.com'}
+INFO 2024-01-16 22:59:39,975 views Input - 1 {'teacher_name': 'gayatri', 'teacher_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-16 22:59:39,975 views Invalid email id
+WARNING 2024-01-16 22:59:39,975 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 22:59:39,976 views Input - 1 {'teacher_name': 'gaya%$#', 'teacher_email': 'gayatri@example.com'}
+ERROR 2024-01-16 22:59:39,976 views Name should have characters only
+WARNING 2024-01-16 22:59:39,977 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 22:59:39,980 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:59:39,980 views Invalid email id
+WARNING 2024-01-16 22:59:39,980 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:59:39,982 views Input - <QueryDict: {'teacher_name': ['*&^%$#@!'], 'teacher_email': ['goga@example.com']}>
+ERROR 2024-01-16 22:59:39,982 views Name should have characters only
+WARNING 2024-01-16 22:59:39,982 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:59:39,984 views Input - <QueryDict: {'teacher_name': ['gogo'], 'teacher_email': ['']}>
+ERROR 2024-01-16 22:59:39,984 views Invalid email id
+WARNING 2024-01-16 22:59:39,984 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:59:39,987 views Input - <QueryDict: {'teacher_name': [''], 'teacher_email': ['gogo@example.com']}>
+ERROR 2024-01-16 22:59:39,988 views Error - {'teacher_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 22:59:39,988 log Bad Request: /mbschool/teachers/
+INFO 2024-01-16 22:59:39,989 views Input - <QueryDict: {'teacher_name': ['23456'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 22:59:39,989 views Name should have characters only
+WARNING 2024-01-16 22:59:39,989 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 22:59:39,991 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['goga@example.com']}>
+INFO 2024-01-16 23:05:21,536 views Input - 1
+INFO 2024-01-16 23:05:21,541 views Input - 2
+ERROR 2024-01-16 23:05:21,542 views Record not found
+WARNING 2024-01-16 23:05:21,542 log Not Found: /mbschool/courses/2
+INFO 2024-01-16 23:05:21,543 views Input - 1
+INFO 2024-01-16 23:05:21,548 views Input - 2
+ERROR 2024-01-16 23:05:21,548 views Record not found
+WARNING 2024-01-16 23:05:21,549 log Not Found: /mbschool/courses/2
+INFO 2024-01-16 23:05:21,550 views Input - 1
+INFO 2024-01-16 23:05:21,554 views Input - 1
+WARNING 2024-01-16 23:05:21,562 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 23:05:21,564 views Input - 1 {'course_name': ''}
+ERROR 2024-01-16 23:05:21,565 views Error - {'course_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 23:05:21,565 log Bad Request: /mbschool/courses/1
+INFO 2024-01-16 23:05:21,567 views Input - 1 {'course_name': 'python with react'}
+INFO 2024-01-16 23:05:21,571 views Input - 1 {'course_name': 'python 3.11.5'}
+ERROR 2024-01-16 23:05:21,571 views Name should have characters only
+WARNING 2024-01-16 23:05:21,571 log Not Acceptable: /mbschool/courses/1
+INFO 2024-01-16 23:05:21,574 views Input - <QueryDict: {'course_name': ['azure']}>
+INFO 2024-01-16 23:05:21,578 views Input - <QueryDict: {'course_name': ['*&^%$#@']}>
+ERROR 2024-01-16 23:05:21,578 views Name should have characters only
+WARNING 2024-01-16 23:05:21,578 log Not Acceptable: /mbschool/courses/
+INFO 2024-01-16 23:05:21,582 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '3']}>
+ERROR 2024-01-16 23:05:21,583 views Student does not exist
+WARNING 2024-01-16 23:05:21,583 log Not Found: /mbschool/studentcourse/
+INFO 2024-01-16 23:05:21,585 views Input - <QueryDict: {'id': ['2'], 'courses': ['1', '2']}>
+ERROR 2024-01-16 23:05:21,585 views Student does not exist
+WARNING 2024-01-16 23:05:21,585 log Not Found: /mbschool/studentcourse/
+INFO 2024-01-16 23:05:21,587 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '2']}>
+INFO 2024-01-16 23:05:21,591 views Input - 1
+INFO 2024-01-16 23:05:21,593 views Input - 2
+ERROR 2024-01-16 23:05:21,594 views Record does not exist
+WARNING 2024-01-16 23:05:21,594 log Not Found: /mbschool/students/2
+INFO 2024-01-16 23:05:21,596 views Input - 1
+INFO 2024-01-16 23:05:21,600 views Input - 5
+ERROR 2024-01-16 23:05:21,600 views Record does not exist
+WARNING 2024-01-16 23:05:21,600 log Not Found: /mbschool/students/5
+INFO 2024-01-16 23:05:21,602 views Input - 1
+INFO 2024-01-16 23:05:21,606 views Input - 1
+WARNING 2024-01-16 23:05:21,608 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 23:05:21,609 views Input - 1 {'student_name': '', 'student_email': ''}
+ERROR 2024-01-16 23:05:21,610 views Invalid email id
+WARNING 2024-01-16 23:05:21,610 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 23:05:21,611 views Input - 1 {'student_name': 'gayatree', 'student_email': 'gayatri@example.com'}
+INFO 2024-01-16 23:05:21,618 views Input - 1 {'student_name': 'gayatri', 'student_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-16 23:05:21,618 views Invalid email id
+WARNING 2024-01-16 23:05:21,618 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 23:05:21,619 views Input - 1 {'student_name': 'gaya%$#', 'student_email': 'gayatri@example.com'}
+ERROR 2024-01-16 23:05:21,620 views Name should have characters only
+WARNING 2024-01-16 23:05:21,620 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 23:05:21,622 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 23:05:21,622 views Invalid email id
+WARNING 2024-01-16 23:05:21,623 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 23:05:21,624 views Input - <QueryDict: {'student_name': ['*&^%$#@!'], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-16 23:05:21,624 views Name should have characters only
+WARNING 2024-01-16 23:05:21,624 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 23:05:21,626 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['']}>
+ERROR 2024-01-16 23:05:21,626 views Invalid email id
+WARNING 2024-01-16 23:05:21,626 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 23:05:21,628 views Input - <QueryDict: {'student_name': [''], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-16 23:05:21,630 views Error - {'student_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 23:05:21,630 log Bad Request: /mbschool/students/
+INFO 2024-01-16 23:05:21,631 views Input - <QueryDict: {'student_name': ['23456'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 23:05:21,631 views Name should have characters only
+WARNING 2024-01-16 23:05:21,632 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 23:05:21,633 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['gogo@example.com']}>
+INFO 2024-01-16 23:05:21,636 views Saved record - {'id': 1, 'student_name': 'gogo', 'student_email': 'gogo@example.com', 'enrolled_year': '2024-01-16', 'student_status': False, 'courses': []}
+INFO 2024-01-16 23:05:21,638 views Input - 1
+INFO 2024-01-16 23:05:21,641 views Input - 2
+ERROR 2024-01-16 23:05:21,641 views Record does not exist
+WARNING 2024-01-16 23:05:21,641 log Not Found: /mbschool/teachers/2
+INFO 2024-01-16 23:05:21,643 views Input - 1
+INFO 2024-01-16 23:05:21,645 views Input - 5
+ERROR 2024-01-16 23:05:21,646 views Record does not exist
+WARNING 2024-01-16 23:05:21,646 log Not Found: /mbschool/teachers/5
+INFO 2024-01-16 23:05:21,648 views Input - 1
+INFO 2024-01-16 23:05:21,651 views Input - 1
+WARNING 2024-01-16 23:05:21,653 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 23:05:21,655 views Input - 1 {'teacher_name': '', 'teacher_email': ''}
+ERROR 2024-01-16 23:05:21,655 views Invalid email id
+WARNING 2024-01-16 23:05:21,655 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 23:05:21,656 views Input - 1 {'teacher_name': 'gayatree', 'teacher_email': 'gayatri@example.com'}
+INFO 2024-01-16 23:05:21,660 views Input - 1 {'teacher_name': 'gayatri', 'teacher_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-16 23:05:21,660 views Invalid email id
+WARNING 2024-01-16 23:05:21,660 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 23:05:21,662 views Input - 1 {'teacher_name': 'gaya%$#', 'teacher_email': 'gayatri@example.com'}
+ERROR 2024-01-16 23:05:21,662 views Name should have characters only
+WARNING 2024-01-16 23:05:21,662 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 23:05:21,666 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 23:05:21,666 views Invalid email id
+WARNING 2024-01-16 23:05:21,666 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 23:05:21,668 views Input - <QueryDict: {'teacher_name': ['*&^%$#@!'], 'teacher_email': ['goga@example.com']}>
+ERROR 2024-01-16 23:05:21,668 views Name should have characters only
+WARNING 2024-01-16 23:05:21,668 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 23:05:21,669 views Input - <QueryDict: {'teacher_name': ['gogo'], 'teacher_email': ['']}>
+ERROR 2024-01-16 23:05:21,669 views Invalid email id
+WARNING 2024-01-16 23:05:21,669 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 23:05:21,671 views Input - <QueryDict: {'teacher_name': [''], 'teacher_email': ['gogo@example.com']}>
+ERROR 2024-01-16 23:05:21,671 views Error - {'teacher_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 23:05:21,672 log Bad Request: /mbschool/teachers/
+INFO 2024-01-16 23:05:21,673 views Input - <QueryDict: {'teacher_name': ['23456'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 23:05:21,673 views Name should have characters only
+WARNING 2024-01-16 23:05:21,673 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 23:05:21,675 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['goga@example.com']}>
+INFO 2024-01-16 23:09:17,314 views Input - 1
+INFO 2024-01-16 23:09:17,317 views Input - 2
+ERROR 2024-01-16 23:09:17,317 views Record not found
+WARNING 2024-01-16 23:09:17,317 log Not Found: /mbschool/courses/2
+INFO 2024-01-16 23:09:17,320 views Input - 1
+INFO 2024-01-16 23:09:17,324 views Input - 2
+ERROR 2024-01-16 23:09:17,324 views Record not found
+WARNING 2024-01-16 23:09:17,324 log Not Found: /mbschool/courses/2
+INFO 2024-01-16 23:09:17,326 views Input - 1
+INFO 2024-01-16 23:09:17,329 views Input - 1
+WARNING 2024-01-16 23:09:17,337 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 23:09:17,339 views Input - 1 {'course_name': ''}
+ERROR 2024-01-16 23:09:17,340 views Error - {'course_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 23:09:17,340 log Bad Request: /mbschool/courses/1
+INFO 2024-01-16 23:09:17,342 views Input - 1 {'course_name': 'python with react'}
+INFO 2024-01-16 23:09:17,346 views Input - 1 {'course_name': 'python 3.11.5'}
+ERROR 2024-01-16 23:09:17,346 views Name should have characters only
+WARNING 2024-01-16 23:09:17,346 log Not Acceptable: /mbschool/courses/1
+INFO 2024-01-16 23:09:17,349 views Input - <QueryDict: {'course_name': ['azure']}>
+INFO 2024-01-16 23:09:17,353 views Input - <QueryDict: {'course_name': ['*&^%$#@']}>
+ERROR 2024-01-16 23:09:17,353 views Name should have characters only
+WARNING 2024-01-16 23:09:17,353 log Not Acceptable: /mbschool/courses/
+INFO 2024-01-16 23:09:17,357 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '3']}>
+ERROR 2024-01-16 23:09:17,358 views Student does not exist
+WARNING 2024-01-16 23:09:17,358 log Not Found: /mbschool/studentcourse/
+INFO 2024-01-16 23:09:17,360 views Input - <QueryDict: {'id': ['2'], 'courses': ['1', '2']}>
+ERROR 2024-01-16 23:09:17,360 views Student does not exist
+WARNING 2024-01-16 23:09:17,361 log Not Found: /mbschool/studentcourse/
+INFO 2024-01-16 23:09:17,363 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '2']}>
+INFO 2024-01-16 23:09:17,366 views Input - 1
+INFO 2024-01-16 23:09:17,369 views Input - 2
+ERROR 2024-01-16 23:09:17,369 views Record does not exist
+WARNING 2024-01-16 23:09:17,370 log Not Found: /mbschool/students/2
+INFO 2024-01-16 23:09:17,371 views Input - 1
+INFO 2024-01-16 23:09:17,374 views Input - 5
+ERROR 2024-01-16 23:09:17,375 views Record does not exist
+WARNING 2024-01-16 23:09:17,375 log Not Found: /mbschool/students/5
+INFO 2024-01-16 23:09:17,377 views Input - 1
+INFO 2024-01-16 23:09:17,381 views Input - 1
+WARNING 2024-01-16 23:09:17,384 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 23:09:17,386 views Input - 1 {'student_name': '', 'student_email': ''}
+ERROR 2024-01-16 23:09:17,386 views Invalid email id
+WARNING 2024-01-16 23:09:17,386 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 23:09:17,388 views Input - 1 {'student_name': 'gayatree', 'student_email': 'gayatri@example.com'}
+INFO 2024-01-16 23:09:17,394 views Input - 1 {'student_name': 'gayatri', 'student_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-16 23:09:17,394 views Invalid email id
+WARNING 2024-01-16 23:09:17,394 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 23:09:17,395 views Input - 1 {'student_name': 'gaya%$#', 'student_email': 'gayatri@example.com'}
+ERROR 2024-01-16 23:09:17,396 views Name should have characters only
+WARNING 2024-01-16 23:09:17,396 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 23:09:17,399 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 23:09:17,399 views Invalid email id
+WARNING 2024-01-16 23:09:17,399 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 23:09:17,401 views Input - <QueryDict: {'student_name': ['*&^%$#@!'], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-16 23:09:17,401 views Name should have characters only
+WARNING 2024-01-16 23:09:17,401 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 23:09:17,403 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['']}>
+ERROR 2024-01-16 23:09:17,403 views Invalid email id
+WARNING 2024-01-16 23:09:17,403 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 23:09:17,405 views Input - <QueryDict: {'student_name': [''], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-16 23:09:17,406 views Error - {'student_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 23:09:17,406 log Bad Request: /mbschool/students/
+INFO 2024-01-16 23:09:17,408 views Input - <QueryDict: {'student_name': ['23456'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 23:09:17,408 views Name should have characters only
+WARNING 2024-01-16 23:09:17,408 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 23:09:17,410 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['gogo@example.com']}>
+INFO 2024-01-16 23:09:17,412 views Saved record - {'id': 1, 'student_name': 'gogo', 'student_email': 'gogo@example.com', 'enrolled_year': '2024-01-16', 'student_status': False, 'courses': []}
+INFO 2024-01-16 23:09:17,414 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '3']}>
+ERROR 2024-01-16 23:09:17,415 views Teacher does not exist
+WARNING 2024-01-16 23:09:17,415 log Not Found: /mbschool/teachercourse/
+INFO 2024-01-16 23:09:17,417 views Input - <QueryDict: {'id': ['2'], 'courses': ['1', '2']}>
+ERROR 2024-01-16 23:09:17,418 views Teacher does not exist
+WARNING 2024-01-16 23:09:17,418 log Not Found: /mbschool/teachercourse/
+INFO 2024-01-16 23:09:17,421 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '2']}>
+INFO 2024-01-16 23:09:17,425 views Input - 1
+INFO 2024-01-16 23:09:17,428 views Input - 2
+ERROR 2024-01-16 23:09:17,428 views Record does not exist
+WARNING 2024-01-16 23:09:17,428 log Not Found: /mbschool/teachers/2
+INFO 2024-01-16 23:09:17,429 views Input - 1
+INFO 2024-01-16 23:09:17,433 views Input - 5
+ERROR 2024-01-16 23:09:17,433 views Record does not exist
+WARNING 2024-01-16 23:09:17,433 log Not Found: /mbschool/teachers/5
+INFO 2024-01-16 23:09:17,435 views Input - 1
+INFO 2024-01-16 23:09:17,439 views Input - 1
+WARNING 2024-01-16 23:09:17,440 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 23:09:17,442 views Input - 1 {'teacher_name': '', 'teacher_email': ''}
+ERROR 2024-01-16 23:09:17,442 views Invalid email id
+WARNING 2024-01-16 23:09:17,442 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 23:09:17,444 views Input - 1 {'teacher_name': 'gayatree', 'teacher_email': 'gayatri@example.com'}
+INFO 2024-01-16 23:09:17,448 views Input - 1 {'teacher_name': 'gayatri', 'teacher_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-16 23:09:17,448 views Invalid email id
+WARNING 2024-01-16 23:09:17,448 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 23:09:17,449 views Input - 1 {'teacher_name': 'gaya%$#', 'teacher_email': 'gayatri@example.com'}
+ERROR 2024-01-16 23:09:17,449 views Name should have characters only
+WARNING 2024-01-16 23:09:17,450 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 23:09:17,453 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 23:09:17,453 views Invalid email id
+WARNING 2024-01-16 23:09:17,453 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 23:09:17,455 views Input - <QueryDict: {'teacher_name': ['*&^%$#@!'], 'teacher_email': ['goga@example.com']}>
+ERROR 2024-01-16 23:09:17,455 views Name should have characters only
+WARNING 2024-01-16 23:09:17,455 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 23:09:17,456 views Input - <QueryDict: {'teacher_name': ['gogo'], 'teacher_email': ['']}>
+ERROR 2024-01-16 23:09:17,457 views Invalid email id
+WARNING 2024-01-16 23:09:17,457 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 23:09:17,458 views Input - <QueryDict: {'teacher_name': [''], 'teacher_email': ['gogo@example.com']}>
+ERROR 2024-01-16 23:09:17,460 views Error - {'teacher_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 23:09:17,460 log Bad Request: /mbschool/teachers/
+INFO 2024-01-16 23:09:17,461 views Input - <QueryDict: {'teacher_name': ['23456'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 23:09:17,461 views Name should have characters only
+WARNING 2024-01-16 23:09:17,461 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 23:09:17,463 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['goga@example.com']}>
+INFO 2024-01-16 23:25:56,309 autoreload Watching for file changes with StatReloader
+INFO 2024-01-16 23:29:57,711 views Input - 1
+INFO 2024-01-16 23:29:57,715 views Input - 2
+ERROR 2024-01-16 23:29:57,715 views Record not found
+WARNING 2024-01-16 23:29:57,716 log Not Found: /mbschool/courses/2
+INFO 2024-01-16 23:29:57,718 views Input - 1
+INFO 2024-01-16 23:29:57,721 views Input - 2
+ERROR 2024-01-16 23:29:57,721 views Record not found
+WARNING 2024-01-16 23:29:57,721 log Not Found: /mbschool/courses/2
+INFO 2024-01-16 23:29:57,724 views Input - 1
+INFO 2024-01-16 23:29:57,727 views Input - 1
+WARNING 2024-01-16 23:29:57,735 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 23:29:57,737 views Input - 1 {'course_name': ''}
+ERROR 2024-01-16 23:29:57,738 views Error - {'course_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 23:29:57,738 log Bad Request: /mbschool/courses/1
+INFO 2024-01-16 23:29:57,740 views Input - 1 {'course_name': 'python with react'}
+INFO 2024-01-16 23:29:57,744 views Input - 1 {'course_name': 'python 3.11.5'}
+ERROR 2024-01-16 23:29:57,744 views Name should have characters only
+WARNING 2024-01-16 23:29:57,745 log Not Acceptable: /mbschool/courses/1
+INFO 2024-01-16 23:29:57,748 views Input - <QueryDict: {'course_name': ['azure']}>
+INFO 2024-01-16 23:29:57,752 views Input - <QueryDict: {'course_name': ['*&^%$#@']}>
+ERROR 2024-01-16 23:29:57,752 views Name should have characters only
+WARNING 2024-01-16 23:29:57,752 log Not Acceptable: /mbschool/courses/
+INFO 2024-01-16 23:29:57,755 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '3']}>
+ERROR 2024-01-16 23:29:57,755 views Student does not exist
+WARNING 2024-01-16 23:29:57,755 log Not Found: /mbschool/studentcourse/
+INFO 2024-01-16 23:29:57,757 views Input - <QueryDict: {'id': ['2'], 'courses': ['1', '2']}>
+ERROR 2024-01-16 23:29:57,758 views Student does not exist
+WARNING 2024-01-16 23:29:57,758 log Not Found: /mbschool/studentcourse/
+INFO 2024-01-16 23:29:57,760 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '2']}>
+INFO 2024-01-16 23:29:57,764 views Input - 1
+INFO 2024-01-16 23:29:57,768 views Input - 2
+ERROR 2024-01-16 23:29:57,768 views Record does not exist
+WARNING 2024-01-16 23:29:57,768 log Not Found: /mbschool/students/2
+INFO 2024-01-16 23:29:57,770 views Input - 1
+INFO 2024-01-16 23:29:57,773 views Input - 5
+ERROR 2024-01-16 23:29:57,773 views Record does not exist
+WARNING 2024-01-16 23:29:57,773 log Not Found: /mbschool/students/5
+INFO 2024-01-16 23:29:57,775 views Input - 1
+INFO 2024-01-16 23:29:57,780 views Input - 1
+WARNING 2024-01-16 23:29:57,782 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 23:29:57,784 views Input - 1 {'student_name': '', 'student_email': ''}
+ERROR 2024-01-16 23:29:57,784 views Invalid email id
+WARNING 2024-01-16 23:29:57,784 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 23:29:57,786 views Input - 1 {'student_name': 'gayatree', 'student_email': 'gayatri@example.com'}
+INFO 2024-01-16 23:29:57,792 views Input - 1 {'student_name': 'gayatri', 'student_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-16 23:29:57,792 views Invalid email id
+WARNING 2024-01-16 23:29:57,793 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 23:29:57,794 views Input - 1 {'student_name': 'gaya%$#', 'student_email': 'gayatri@example.com'}
+ERROR 2024-01-16 23:29:57,794 views Name should have characters only
+WARNING 2024-01-16 23:29:57,795 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-16 23:29:57,798 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 23:29:57,798 views Invalid email id
+WARNING 2024-01-16 23:29:57,799 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 23:29:57,800 views Input - <QueryDict: {'student_name': ['*&^%$#@!'], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-16 23:29:57,800 views Name should have characters only
+WARNING 2024-01-16 23:29:57,800 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 23:29:57,802 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['']}>
+ERROR 2024-01-16 23:29:57,802 views Invalid email id
+WARNING 2024-01-16 23:29:57,802 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 23:29:57,804 views Input - <QueryDict: {'student_name': [''], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-16 23:29:57,805 views Error - {'student_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 23:29:57,805 log Bad Request: /mbschool/students/
+INFO 2024-01-16 23:29:57,807 views Input - <QueryDict: {'student_name': ['23456'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 23:29:57,807 views Name should have characters only
+WARNING 2024-01-16 23:29:57,807 log Not Acceptable: /mbschool/students/
+INFO 2024-01-16 23:29:57,808 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['gogo@example.com']}>
+INFO 2024-01-16 23:29:57,810 views Saved record - {'id': 1, 'student_name': 'gogo', 'student_email': 'gogo@example.com', 'enrolled_year': '2024-01-16', 'student_status': False, 'courses': []}
+INFO 2024-01-16 23:29:57,813 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '3']}>
+ERROR 2024-01-16 23:29:57,814 views Teacher does not exist
+WARNING 2024-01-16 23:29:57,814 log Not Found: /mbschool/teachercourse/
+INFO 2024-01-16 23:29:57,817 views Input - <QueryDict: {'id': ['2'], 'courses': ['1', '2']}>
+ERROR 2024-01-16 23:29:57,818 views Teacher does not exist
+WARNING 2024-01-16 23:29:57,818 log Not Found: /mbschool/teachercourse/
+INFO 2024-01-16 23:29:57,820 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '2']}>
+INFO 2024-01-16 23:29:57,823 views Input - 1
+INFO 2024-01-16 23:29:57,826 views Input - 2
+ERROR 2024-01-16 23:29:57,827 views Record does not exist
+WARNING 2024-01-16 23:29:57,827 log Not Found: /mbschool/teachers/2
+INFO 2024-01-16 23:29:57,829 views Input - 1
+INFO 2024-01-16 23:29:57,832 views Input - 5
+ERROR 2024-01-16 23:29:57,832 views Record does not exist
+WARNING 2024-01-16 23:29:57,833 log Not Found: /mbschool/teachers/5
+INFO 2024-01-16 23:29:57,834 views Input - 1
+INFO 2024-01-16 23:29:57,837 views Input - 1
+WARNING 2024-01-16 23:29:57,838 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-16 23:29:57,840 views Input - 1 {'teacher_name': '', 'teacher_email': ''}
+ERROR 2024-01-16 23:29:57,840 views Invalid email id
+WARNING 2024-01-16 23:29:57,840 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 23:29:57,841 views Input - 1 {'teacher_name': 'gayatree', 'teacher_email': 'gayatri@example.com'}
+INFO 2024-01-16 23:29:57,846 views Input - 1 {'teacher_name': 'gayatri', 'teacher_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-16 23:29:57,846 views Invalid email id
+WARNING 2024-01-16 23:29:57,846 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 23:29:57,848 views Input - 1 {'teacher_name': 'gaya%$#', 'teacher_email': 'gayatri@example.com'}
+ERROR 2024-01-16 23:29:57,848 views Name should have characters only
+WARNING 2024-01-16 23:29:57,848 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-16 23:29:57,851 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 23:29:57,851 views Invalid email id
+WARNING 2024-01-16 23:29:57,851 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 23:29:57,853 views Input - <QueryDict: {'teacher_name': ['*&^%$#@!'], 'teacher_email': ['goga@example.com']}>
+ERROR 2024-01-16 23:29:57,853 views Name should have characters only
+WARNING 2024-01-16 23:29:57,853 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 23:29:57,855 views Input - <QueryDict: {'teacher_name': ['gogo'], 'teacher_email': ['']}>
+ERROR 2024-01-16 23:29:57,855 views Invalid email id
+WARNING 2024-01-16 23:29:57,855 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 23:29:57,856 views Input - <QueryDict: {'teacher_name': [''], 'teacher_email': ['gogo@example.com']}>
+ERROR 2024-01-16 23:29:57,857 views Error - {'teacher_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-16 23:29:57,857 log Bad Request: /mbschool/teachers/
+INFO 2024-01-16 23:29:57,859 views Input - <QueryDict: {'teacher_name': ['23456'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-16 23:29:57,860 views Name should have characters only
+WARNING 2024-01-16 23:29:57,860 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-16 23:29:57,862 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['goga@example.com']}>
+INFO 2024-01-16 23:33:53,697 autoreload Watching for file changes with StatReloader
+INFO 2024-01-16 23:34:21,957 views Input - {'teacher_name': 'ga'}
+ERROR 2024-01-16 23:34:22,146 log Internal Server Error: /mbschool/searchteacher/
+Traceback (most recent call last):
+  File "C:\Users\girish.deshpande\AppData\Roaming\Python\Python38\school_management\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\girish.deshpande\AppData\Roaming\Python\Python38\school_management\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\girish.deshpande\AppData\Roaming\Python\Python38\school_management\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\girish.deshpande\AppData\Roaming\Python\Python38\school_management\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\girish.deshpande\AppData\Roaming\Python\Python38\school_management\Lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\girish.deshpande\AppData\Roaming\Python\Python38\school_management\Lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2024-01-16 23:34:22,150 basehttp "GET /mbschool/searchteacher/ HTTP/1.1" 500 78516
+INFO 2024-01-16 23:38:47,126 views Input - {'teacher_name': 'gi'}
+ERROR 2024-01-16 23:38:47,179 log Internal Server Error: /mbschool/searchteacher/
+Traceback (most recent call last):
+  File "C:\Users\girish.deshpande\AppData\Roaming\Python\Python38\school_management\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\girish.deshpande\AppData\Roaming\Python\Python38\school_management\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\girish.deshpande\AppData\Roaming\Python\Python38\school_management\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\girish.deshpande\AppData\Roaming\Python\Python38\school_management\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\girish.deshpande\AppData\Roaming\Python\Python38\school_management\Lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\girish.deshpande\AppData\Roaming\Python\Python38\school_management\Lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2024-01-16 23:38:47,180 basehttp "GET /mbschool/searchteacher/ HTTP/1.1" 500 78516
+INFO 2024-01-16 23:40:37,849 autoreload D:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-16 23:40:38,807 autoreload Watching for file changes with StatReloader
+INFO 2024-01-16 23:40:44,815 autoreload D:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-16 23:40:45,733 autoreload Watching for file changes with StatReloader
+INFO 2024-01-16 23:40:51,636 autoreload D:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-16 23:40:52,526 autoreload Watching for file changes with StatReloader
+INFO 2024-01-16 23:41:17,969 autoreload D:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-16 23:41:18,875 autoreload Watching for file changes with StatReloader
+INFO 2024-01-16 23:41:34,560 autoreload D:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-16 23:41:35,438 autoreload Watching for file changes with StatReloader
+INFO 2024-01-16 23:41:46,778 autoreload D:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-16 23:41:47,599 autoreload Watching for file changes with StatReloader
+INFO 2024-01-16 23:42:28,476 views Input - {'teacher_name': 'gi'}
+INFO 2024-01-16 23:42:28,489 basehttp "GET /mbschool/searchteacher/ HTTP/1.1" 200 2044
+INFO 2024-01-17 00:00:02,472 autoreload D:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-17 00:00:03,276 autoreload Watching for file changes with StatReloader
+INFO 2024-01-17 00:00:13,024 views Input - {'teacher_name': 'gi'}
+INFO 2024-01-17 00:00:13,028 basehttp "GET /mbschool/searchteacher/ HTTP/1.1" 200 15
+INFO 2024-01-17 00:00:52,202 views Input - {'teacher_name': 'sa'}
+INFO 2024-01-17 00:00:52,213 basehttp "GET /mbschool/searchteacher/ HTTP/1.1" 200 953
+INFO 2024-01-17 00:01:35,146 views Input - {'teacher_name': 'anu'}
+INFO 2024-01-17 00:01:35,152 basehttp "GET /mbschool/searchteacher/ HTTP/1.1" 200 121
+INFO 2024-01-17 00:01:58,512 autoreload D:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-17 00:01:59,330 autoreload Watching for file changes with StatReloader
+INFO 2024-01-17 00:02:10,560 views Input - {'teacher_name': 'ni'}
+INFO 2024-01-17 00:02:10,569 basehttp "GET /mbschool/searchteacher/ HTTP/1.1" 200 119
+INFO 2024-01-17 00:07:49,803 autoreload D:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-17 00:07:50,712 autoreload Watching for file changes with StatReloader
+INFO 2024-01-17 00:09:12,672 views Input - {'student_name': 'gi'}
+INFO 2024-01-17 00:09:12,699 basehttp "GET /mbschool/searchstudent/ HTTP/1.1" 200 1846
+INFO 2024-01-17 00:09:31,752 views Input - {'student_name': 'gr'}
+INFO 2024-01-17 00:09:31,760 basehttp "GET /mbschool/searchstudent/ HTTP/1.1" 200 150
+INFO 2024-01-17 00:09:58,991 autoreload D:\school_management\school\mbschool\views.py changed, reloading.
+INFO 2024-01-17 00:09:59,888 autoreload Watching for file changes with StatReloader
+INFO 2024-01-17 00:10:01,548 views Input - {'student_name': 'gr'}
+INFO 2024-01-17 00:10:01,553 basehttp "GET /mbschool/searchstudent/ HTTP/1.1" 200 150
+INFO 2024-01-17 00:10:41,449 views Input - 1
+INFO 2024-01-17 00:10:41,453 views Input - 2
+ERROR 2024-01-17 00:10:41,453 views Record not found
+WARNING 2024-01-17 00:10:41,453 log Not Found: /mbschool/courses/2
+INFO 2024-01-17 00:10:41,455 views Input - 1
+INFO 2024-01-17 00:10:41,458 views Input - 2
+ERROR 2024-01-17 00:10:41,459 views Record not found
+WARNING 2024-01-17 00:10:41,459 log Not Found: /mbschool/courses/2
+INFO 2024-01-17 00:10:41,460 views Input - 1
+INFO 2024-01-17 00:10:41,464 views Input - 1
+WARNING 2024-01-17 00:10:41,471 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-17 00:10:41,473 views Input - 1 {'course_name': ''}
+ERROR 2024-01-17 00:10:41,474 views Error - {'course_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-17 00:10:41,475 log Bad Request: /mbschool/courses/1
+INFO 2024-01-17 00:10:41,477 views Input - 1 {'course_name': 'python with react'}
+INFO 2024-01-17 00:10:41,481 views Input - 1 {'course_name': 'python 3.11.5'}
+ERROR 2024-01-17 00:10:41,481 views Name should have characters only
+WARNING 2024-01-17 00:10:41,481 log Not Acceptable: /mbschool/courses/1
+INFO 2024-01-17 00:10:41,485 views Input - <QueryDict: {'course_name': ['azure']}>
+INFO 2024-01-17 00:10:41,489 views Input - <QueryDict: {'course_name': ['*&^%$#@']}>
+ERROR 2024-01-17 00:10:41,489 views Name should have characters only
+WARNING 2024-01-17 00:10:41,489 log Not Acceptable: /mbschool/courses/
+INFO 2024-01-17 00:10:41,492 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '3']}>
+ERROR 2024-01-17 00:10:41,493 views Student does not exist
+WARNING 2024-01-17 00:10:41,493 log Not Found: /mbschool/studentcourse/
+INFO 2024-01-17 00:10:41,495 views Input - <QueryDict: {'id': ['2'], 'courses': ['1', '2']}>
+ERROR 2024-01-17 00:10:41,495 views Student does not exist
+WARNING 2024-01-17 00:10:41,496 log Not Found: /mbschool/studentcourse/
+INFO 2024-01-17 00:10:41,499 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '2']}>
+INFO 2024-01-17 00:10:41,501 views Input - 1
+INFO 2024-01-17 00:10:41,505 views Input - 2
+ERROR 2024-01-17 00:10:41,505 views Record does not exist
+WARNING 2024-01-17 00:10:41,505 log Not Found: /mbschool/students/2
+INFO 2024-01-17 00:10:41,507 views Input - 1
+INFO 2024-01-17 00:10:41,510 views Input - 5
+ERROR 2024-01-17 00:10:41,510 views Record does not exist
+WARNING 2024-01-17 00:10:41,510 log Not Found: /mbschool/students/5
+INFO 2024-01-17 00:10:41,512 views Input - 1
+INFO 2024-01-17 00:10:41,517 views Input - 1
+WARNING 2024-01-17 00:10:41,520 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-17 00:10:41,521 views Input - 1 {'student_name': '', 'student_email': ''}
+ERROR 2024-01-17 00:10:41,522 views Invalid email id
+WARNING 2024-01-17 00:10:41,522 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-17 00:10:41,523 views Input - 1 {'student_name': 'gayatree', 'student_email': 'gayatri@example.com'}
+INFO 2024-01-17 00:10:41,529 views Input - 1 {'student_name': 'gayatri', 'student_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-17 00:10:41,529 views Invalid email id
+WARNING 2024-01-17 00:10:41,530 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-17 00:10:41,531 views Input - 1 {'student_name': 'gaya%$#', 'student_email': 'gayatri@example.com'}
+ERROR 2024-01-17 00:10:41,531 views Name should have characters only
+WARNING 2024-01-17 00:10:41,531 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-17 00:10:41,534 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-17 00:10:41,535 views Invalid email id
+WARNING 2024-01-17 00:10:41,535 log Not Acceptable: /mbschool/students/
+INFO 2024-01-17 00:10:41,536 views Input - <QueryDict: {'student_name': ['*&^%$#@!'], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-17 00:10:41,536 views Name should have characters only
+WARNING 2024-01-17 00:10:41,537 log Not Acceptable: /mbschool/students/
+INFO 2024-01-17 00:10:41,538 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['']}>
+ERROR 2024-01-17 00:10:41,538 views Invalid email id
+WARNING 2024-01-17 00:10:41,538 log Not Acceptable: /mbschool/students/
+INFO 2024-01-17 00:10:41,539 views Input - <QueryDict: {'student_name': [''], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-17 00:10:41,541 views Error - {'student_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-17 00:10:41,541 log Bad Request: /mbschool/students/
+INFO 2024-01-17 00:10:41,542 views Input - <QueryDict: {'student_name': ['23456'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-17 00:10:41,542 views Name should have characters only
+WARNING 2024-01-17 00:10:41,542 log Not Acceptable: /mbschool/students/
+INFO 2024-01-17 00:10:41,544 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['gogo@example.com']}>
+INFO 2024-01-17 00:10:41,546 views Saved record - {'id': 1, 'student_name': 'gogo', 'student_email': 'gogo@example.com', 'enrolled_year': '2024-01-17', 'student_status': False, 'courses': []}
+INFO 2024-01-17 00:10:41,549 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '3']}>
+ERROR 2024-01-17 00:10:41,549 views Teacher does not exist
+WARNING 2024-01-17 00:10:41,550 log Not Found: /mbschool/teachercourse/
+INFO 2024-01-17 00:10:41,551 views Input - <QueryDict: {'id': ['2'], 'courses': ['1', '2']}>
+ERROR 2024-01-17 00:10:41,552 views Teacher does not exist
+WARNING 2024-01-17 00:10:41,552 log Not Found: /mbschool/teachercourse/
+INFO 2024-01-17 00:10:41,554 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '2']}>
+INFO 2024-01-17 00:10:41,557 views Input - 1
+INFO 2024-01-17 00:10:41,559 views Input - 2
+ERROR 2024-01-17 00:10:41,560 views Record does not exist
+WARNING 2024-01-17 00:10:41,560 log Not Found: /mbschool/teachers/2
+INFO 2024-01-17 00:10:41,562 views Input - 1
+INFO 2024-01-17 00:10:41,565 views Input - 5
+ERROR 2024-01-17 00:10:41,566 views Record does not exist
+WARNING 2024-01-17 00:10:41,566 log Not Found: /mbschool/teachers/5
+INFO 2024-01-17 00:10:41,567 views Input - 1
+INFO 2024-01-17 00:10:41,570 views Input - 1
+WARNING 2024-01-17 00:10:41,572 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-17 00:10:41,573 views Input - 1 {'teacher_name': '', 'teacher_email': ''}
+ERROR 2024-01-17 00:10:41,573 views Invalid email id
+WARNING 2024-01-17 00:10:41,573 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-17 00:10:41,575 views Input - 1 {'teacher_name': 'gayatree', 'teacher_email': 'gayatri@example.com'}
+INFO 2024-01-17 00:10:41,578 views Input - 1 {'teacher_name': 'gayatri', 'teacher_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-17 00:10:41,578 views Invalid email id
+WARNING 2024-01-17 00:10:41,578 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-17 00:10:41,581 views Input - 1 {'teacher_name': 'gaya%$#', 'teacher_email': 'gayatri@example.com'}
+ERROR 2024-01-17 00:10:41,581 views Name should have characters only
+WARNING 2024-01-17 00:10:41,581 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-17 00:10:41,584 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-17 00:10:41,585 views Invalid email id
+WARNING 2024-01-17 00:10:41,585 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-17 00:10:41,586 views Input - <QueryDict: {'teacher_name': ['*&^%$#@!'], 'teacher_email': ['goga@example.com']}>
+ERROR 2024-01-17 00:10:41,586 views Name should have characters only
+WARNING 2024-01-17 00:10:41,586 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-17 00:10:41,588 views Input - <QueryDict: {'teacher_name': ['gogo'], 'teacher_email': ['']}>
+ERROR 2024-01-17 00:10:41,588 views Invalid email id
+WARNING 2024-01-17 00:10:41,588 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-17 00:10:41,589 views Input - <QueryDict: {'teacher_name': [''], 'teacher_email': ['gogo@example.com']}>
+ERROR 2024-01-17 00:10:41,590 views Error - {'teacher_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-17 00:10:41,590 log Bad Request: /mbschool/teachers/
+INFO 2024-01-17 00:10:41,591 views Input - <QueryDict: {'teacher_name': ['23456'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-17 00:10:41,592 views Name should have characters only
+WARNING 2024-01-17 00:10:41,592 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-17 00:10:41,593 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['goga@example.com']}>
+INFO 2024-01-17 00:14:41,799 views Input - 1
+INFO 2024-01-17 00:14:41,804 views Input - 2
+ERROR 2024-01-17 00:14:41,805 views Record not found
+WARNING 2024-01-17 00:14:41,805 log Not Found: /mbschool/courses/2
+INFO 2024-01-17 00:14:41,806 views Input - 1
+INFO 2024-01-17 00:14:41,810 views Input - 2
+ERROR 2024-01-17 00:14:41,810 views Record not found
+WARNING 2024-01-17 00:14:41,811 log Not Found: /mbschool/courses/2
+INFO 2024-01-17 00:14:41,812 views Input - 1
+INFO 2024-01-17 00:14:41,815 views Input - 1
+WARNING 2024-01-17 00:14:41,823 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-17 00:14:41,825 views Input - 1 {'course_name': ''}
+ERROR 2024-01-17 00:14:41,826 views Error - {'course_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-17 00:14:41,826 log Bad Request: /mbschool/courses/1
+INFO 2024-01-17 00:14:41,828 views Input - 1 {'course_name': 'python with react'}
+INFO 2024-01-17 00:14:41,832 views Input - 1 {'course_name': 'python 3.11.5'}
+ERROR 2024-01-17 00:14:41,832 views Name should have characters only
+WARNING 2024-01-17 00:14:41,832 log Not Acceptable: /mbschool/courses/1
+INFO 2024-01-17 00:14:41,835 views Input - <QueryDict: {'course_name': ['azure']}>
+INFO 2024-01-17 00:14:41,840 views Input - <QueryDict: {'course_name': ['*&^%$#@']}>
+ERROR 2024-01-17 00:14:41,840 views Name should have characters only
+WARNING 2024-01-17 00:14:41,840 log Not Acceptable: /mbschool/courses/
+INFO 2024-01-17 00:14:41,843 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '3']}>
+ERROR 2024-01-17 00:14:41,844 views Student does not exist
+WARNING 2024-01-17 00:14:41,844 log Not Found: /mbschool/studentcourse/
+INFO 2024-01-17 00:14:41,846 views Input - <QueryDict: {'id': ['2'], 'courses': ['1', '2']}>
+ERROR 2024-01-17 00:14:41,846 views Student does not exist
+WARNING 2024-01-17 00:14:41,847 log Not Found: /mbschool/studentcourse/
+INFO 2024-01-17 00:14:41,849 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '2']}>
+INFO 2024-01-17 00:14:41,852 views Input - 1
+INFO 2024-01-17 00:14:41,855 views Input - 2
+ERROR 2024-01-17 00:14:41,856 views Record does not exist
+WARNING 2024-01-17 00:14:41,856 log Not Found: /mbschool/students/2
+INFO 2024-01-17 00:14:41,858 views Input - 1
+INFO 2024-01-17 00:14:41,861 views Input - 5
+ERROR 2024-01-17 00:14:41,861 views Record does not exist
+WARNING 2024-01-17 00:14:41,861 log Not Found: /mbschool/students/5
+INFO 2024-01-17 00:14:41,863 views Input - 1
+INFO 2024-01-17 00:14:41,867 views Input - 1
+WARNING 2024-01-17 00:14:41,871 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-17 00:14:41,872 views Input - 1 {'student_name': '', 'student_email': ''}
+ERROR 2024-01-17 00:14:41,873 views Invalid email id
+WARNING 2024-01-17 00:14:41,873 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-17 00:14:41,874 views Input - 1 {'student_name': 'gayatree', 'student_email': 'gayatri@example.com'}
+INFO 2024-01-17 00:14:41,880 views Input - 1 {'student_name': 'gayatri', 'student_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-17 00:14:41,880 views Invalid email id
+WARNING 2024-01-17 00:14:41,880 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-17 00:14:41,881 views Input - 1 {'student_name': 'gaya%$#', 'student_email': 'gayatri@example.com'}
+ERROR 2024-01-17 00:14:41,881 views Name should have characters only
+WARNING 2024-01-17 00:14:41,882 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-17 00:14:41,884 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-17 00:14:41,885 views Invalid email id
+WARNING 2024-01-17 00:14:41,885 log Not Acceptable: /mbschool/students/
+INFO 2024-01-17 00:14:41,887 views Input - <QueryDict: {'student_name': ['*&^%$#@!'], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-17 00:14:41,887 views Name should have characters only
+WARNING 2024-01-17 00:14:41,888 log Not Acceptable: /mbschool/students/
+INFO 2024-01-17 00:14:41,889 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['']}>
+ERROR 2024-01-17 00:14:41,889 views Invalid email id
+WARNING 2024-01-17 00:14:41,889 log Not Acceptable: /mbschool/students/
+INFO 2024-01-17 00:14:41,891 views Input - <QueryDict: {'student_name': [''], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-17 00:14:41,892 views Error - {'student_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-17 00:14:41,892 log Bad Request: /mbschool/students/
+INFO 2024-01-17 00:14:41,894 views Input - <QueryDict: {'student_name': ['23456'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-17 00:14:41,894 views Name should have characters only
+WARNING 2024-01-17 00:14:41,894 log Not Acceptable: /mbschool/students/
+INFO 2024-01-17 00:14:41,895 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['gogo@example.com']}>
+INFO 2024-01-17 00:14:41,897 views Saved record - {'id': 1, 'student_name': 'gogo', 'student_email': 'gogo@example.com', 'enrolled_year': '2024-01-17', 'student_status': False, 'courses': []}
+INFO 2024-01-17 00:14:41,900 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '3']}>
+ERROR 2024-01-17 00:14:41,901 views Teacher does not exist
+WARNING 2024-01-17 00:14:41,901 log Not Found: /mbschool/teachercourse/
+INFO 2024-01-17 00:14:41,903 views Input - <QueryDict: {'id': ['2'], 'courses': ['1', '2']}>
+ERROR 2024-01-17 00:14:41,903 views Teacher does not exist
+WARNING 2024-01-17 00:14:41,903 log Not Found: /mbschool/teachercourse/
+INFO 2024-01-17 00:14:41,905 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '2']}>
+INFO 2024-01-17 00:14:41,909 views Input - 1
+INFO 2024-01-17 00:14:41,912 views Input - 2
+ERROR 2024-01-17 00:14:41,912 views Record does not exist
+WARNING 2024-01-17 00:14:41,913 log Not Found: /mbschool/teachers/2
+INFO 2024-01-17 00:14:41,914 views Input - 1
+INFO 2024-01-17 00:14:41,916 views Input - 5
+ERROR 2024-01-17 00:14:41,917 views Record does not exist
+WARNING 2024-01-17 00:14:41,917 log Not Found: /mbschool/teachers/5
+INFO 2024-01-17 00:14:41,918 views Input - 1
+INFO 2024-01-17 00:14:41,922 views Input - 1
+WARNING 2024-01-17 00:14:41,924 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-17 00:14:41,925 views Input - 1 {'teacher_name': '', 'teacher_email': ''}
+ERROR 2024-01-17 00:14:41,925 views Invalid email id
+WARNING 2024-01-17 00:14:41,925 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-17 00:14:41,927 views Input - 1 {'teacher_name': 'gayatree', 'teacher_email': 'gayatri@example.com'}
+INFO 2024-01-17 00:14:41,931 views Input - 1 {'teacher_name': 'gayatri', 'teacher_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-17 00:14:41,931 views Invalid email id
+WARNING 2024-01-17 00:14:41,931 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-17 00:14:41,932 views Input - 1 {'teacher_name': 'gaya%$#', 'teacher_email': 'gayatri@example.com'}
+ERROR 2024-01-17 00:14:41,932 views Name should have characters only
+WARNING 2024-01-17 00:14:41,932 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-17 00:14:41,935 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-17 00:14:41,935 views Invalid email id
+WARNING 2024-01-17 00:14:41,935 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-17 00:14:41,937 views Input - <QueryDict: {'teacher_name': ['*&^%$#@!'], 'teacher_email': ['goga@example.com']}>
+ERROR 2024-01-17 00:14:41,937 views Name should have characters only
+WARNING 2024-01-17 00:14:41,938 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-17 00:14:41,939 views Input - <QueryDict: {'teacher_name': ['gogo'], 'teacher_email': ['']}>
+ERROR 2024-01-17 00:14:41,939 views Invalid email id
+WARNING 2024-01-17 00:14:41,939 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-17 00:14:41,941 views Input - <QueryDict: {'teacher_name': [''], 'teacher_email': ['gogo@example.com']}>
+ERROR 2024-01-17 00:14:41,942 views Error - {'teacher_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-17 00:14:41,942 log Bad Request: /mbschool/teachers/
+INFO 2024-01-17 00:14:41,943 views Input - <QueryDict: {'teacher_name': ['23456'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-17 00:14:41,943 views Name should have characters only
+WARNING 2024-01-17 00:14:41,943 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-17 00:14:41,945 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['goga@example.com']}>
+INFO 2024-01-17 00:15:06,352 views Input - 1
+INFO 2024-01-17 00:15:06,355 views Input - 2
+ERROR 2024-01-17 00:15:06,355 views Record not found
+WARNING 2024-01-17 00:15:06,356 log Not Found: /mbschool/courses/2
+INFO 2024-01-17 00:15:06,358 views Input - 1
+INFO 2024-01-17 00:15:06,361 views Input - 2
+ERROR 2024-01-17 00:15:06,363 views Record not found
+WARNING 2024-01-17 00:15:06,364 log Not Found: /mbschool/courses/2
+INFO 2024-01-17 00:15:06,365 views Input - 1
+INFO 2024-01-17 00:15:06,369 views Input - 1
+WARNING 2024-01-17 00:15:06,377 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-17 00:15:06,379 views Input - 1 {'course_name': ''}
+ERROR 2024-01-17 00:15:06,381 views Error - {'course_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-17 00:15:06,381 log Bad Request: /mbschool/courses/1
+INFO 2024-01-17 00:15:06,383 views Input - 1 {'course_name': 'python with react'}
+INFO 2024-01-17 00:15:06,388 views Input - 1 {'course_name': 'python 3.11.5'}
+ERROR 2024-01-17 00:15:06,388 views Name should have characters only
+WARNING 2024-01-17 00:15:06,389 log Not Acceptable: /mbschool/courses/1
+INFO 2024-01-17 00:15:06,392 views Input - <QueryDict: {'course_name': ['azure']}>
+INFO 2024-01-17 00:15:06,397 views Input - <QueryDict: {'course_name': ['*&^%$#@']}>
+ERROR 2024-01-17 00:15:06,397 views Name should have characters only
+WARNING 2024-01-17 00:15:06,397 log Not Acceptable: /mbschool/courses/
+INFO 2024-01-17 00:15:06,401 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '3']}>
+ERROR 2024-01-17 00:15:06,402 views Student does not exist
+WARNING 2024-01-17 00:15:06,403 log Not Found: /mbschool/studentcourse/
+INFO 2024-01-17 00:15:06,406 views Input - <QueryDict: {'id': ['2'], 'courses': ['1', '2']}>
+ERROR 2024-01-17 00:15:06,406 views Student does not exist
+WARNING 2024-01-17 00:15:06,406 log Not Found: /mbschool/studentcourse/
+INFO 2024-01-17 00:15:06,411 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '2']}>
+INFO 2024-01-17 00:15:06,418 views Input - 1
+INFO 2024-01-17 00:15:06,424 views Input - 2
+ERROR 2024-01-17 00:15:06,426 views Record does not exist
+WARNING 2024-01-17 00:15:06,426 log Not Found: /mbschool/students/2
+INFO 2024-01-17 00:15:06,429 views Input - 1
+INFO 2024-01-17 00:15:06,435 views Input - 5
+ERROR 2024-01-17 00:15:06,435 views Record does not exist
+WARNING 2024-01-17 00:15:06,436 log Not Found: /mbschool/students/5
+INFO 2024-01-17 00:15:06,438 views Input - 1
+INFO 2024-01-17 00:15:06,445 views Input - 1
+WARNING 2024-01-17 00:15:06,450 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-17 00:15:06,452 views Input - 1 {'student_name': '', 'student_email': ''}
+ERROR 2024-01-17 00:15:06,452 views Invalid email id
+WARNING 2024-01-17 00:15:06,452 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-17 00:15:06,454 views Input - 1 {'student_name': 'gayatree', 'student_email': 'gayatri@example.com'}
+INFO 2024-01-17 00:15:06,461 views Input - 1 {'student_name': 'gayatri', 'student_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-17 00:15:06,461 views Invalid email id
+WARNING 2024-01-17 00:15:06,462 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-17 00:15:06,464 views Input - 1 {'student_name': 'gaya%$#', 'student_email': 'gayatri@example.com'}
+ERROR 2024-01-17 00:15:06,464 views Name should have characters only
+WARNING 2024-01-17 00:15:06,464 log Not Acceptable: /mbschool/students/1
+INFO 2024-01-17 00:15:06,468 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-17 00:15:06,468 views Invalid email id
+WARNING 2024-01-17 00:15:06,468 log Not Acceptable: /mbschool/students/
+INFO 2024-01-17 00:15:06,470 views Input - <QueryDict: {'student_name': ['*&^%$#@!'], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-17 00:15:06,470 views Name should have characters only
+WARNING 2024-01-17 00:15:06,470 log Not Acceptable: /mbschool/students/
+INFO 2024-01-17 00:15:06,472 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['']}>
+ERROR 2024-01-17 00:15:06,472 views Invalid email id
+WARNING 2024-01-17 00:15:06,472 log Not Acceptable: /mbschool/students/
+INFO 2024-01-17 00:15:06,473 views Input - <QueryDict: {'student_name': [''], 'student_email': ['gogo@example.com']}>
+ERROR 2024-01-17 00:15:06,475 views Error - {'student_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-17 00:15:06,475 log Bad Request: /mbschool/students/
+INFO 2024-01-17 00:15:06,477 views Input - <QueryDict: {'student_name': ['23456'], 'student_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-17 00:15:06,477 views Name should have characters only
+WARNING 2024-01-17 00:15:06,477 log Not Acceptable: /mbschool/students/
+INFO 2024-01-17 00:15:06,478 views Input - <QueryDict: {'student_name': ['gogo'], 'student_email': ['gogo@example.com']}>
+INFO 2024-01-17 00:15:06,481 views Saved record - {'id': 1, 'student_name': 'gogo', 'student_email': 'gogo@example.com', 'enrolled_year': '2024-01-17', 'student_status': False, 'courses': []}
+INFO 2024-01-17 00:15:06,484 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '3']}>
+ERROR 2024-01-17 00:15:06,485 views Teacher does not exist
+WARNING 2024-01-17 00:15:06,485 log Not Found: /mbschool/teachercourse/
+INFO 2024-01-17 00:15:06,488 views Input - <QueryDict: {'id': ['2'], 'courses': ['1', '2']}>
+ERROR 2024-01-17 00:15:06,488 views Teacher does not exist
+WARNING 2024-01-17 00:15:06,488 log Not Found: /mbschool/teachercourse/
+INFO 2024-01-17 00:15:06,490 views Input - <QueryDict: {'id': ['1'], 'courses': ['1', '2']}>
+INFO 2024-01-17 00:15:06,494 views Input - 1
+INFO 2024-01-17 00:15:06,498 views Input - 2
+ERROR 2024-01-17 00:15:06,498 views Record does not exist
+WARNING 2024-01-17 00:15:06,498 log Not Found: /mbschool/teachers/2
+INFO 2024-01-17 00:15:06,500 views Input - 1
+INFO 2024-01-17 00:15:06,503 views Input - 5
+ERROR 2024-01-17 00:15:06,503 views Record does not exist
+WARNING 2024-01-17 00:15:06,504 log Not Found: /mbschool/teachers/5
+INFO 2024-01-17 00:15:06,505 views Input - 1
+INFO 2024-01-17 00:15:06,509 views Input - 1
+WARNING 2024-01-17 00:15:06,510 log Not Found: /<Response status_code=200, "applicationjson">
+INFO 2024-01-17 00:15:06,513 views Input - 1 {'teacher_name': '', 'teacher_email': ''}
+ERROR 2024-01-17 00:15:06,513 views Invalid email id
+WARNING 2024-01-17 00:15:06,513 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-17 00:15:06,515 views Input - 1 {'teacher_name': 'gayatree', 'teacher_email': 'gayatri@example.com'}
+INFO 2024-01-17 00:15:06,519 views Input - 1 {'teacher_name': 'gayatri', 'teacher_email': 'ga%$#&*tri@example.com'}
+ERROR 2024-01-17 00:15:06,519 views Invalid email id
+WARNING 2024-01-17 00:15:06,519 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-17 00:15:06,521 views Input - 1 {'teacher_name': 'gaya%$#', 'teacher_email': 'gayatri@example.com'}
+ERROR 2024-01-17 00:15:06,521 views Name should have characters only
+WARNING 2024-01-17 00:15:06,521 log Not Acceptable: /mbschool/teachers/1
+INFO 2024-01-17 00:15:06,524 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-17 00:15:06,524 views Invalid email id
+WARNING 2024-01-17 00:15:06,524 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-17 00:15:06,526 views Input - <QueryDict: {'teacher_name': ['*&^%$#@!'], 'teacher_email': ['goga@example.com']}>
+ERROR 2024-01-17 00:15:06,526 views Name should have characters only
+WARNING 2024-01-17 00:15:06,526 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-17 00:15:06,527 views Input - <QueryDict: {'teacher_name': ['gogo'], 'teacher_email': ['']}>
+ERROR 2024-01-17 00:15:06,527 views Invalid email id
+WARNING 2024-01-17 00:15:06,528 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-17 00:15:06,529 views Input - <QueryDict: {'teacher_name': [''], 'teacher_email': ['gogo@example.com']}>
+ERROR 2024-01-17 00:15:06,530 views Error - {'teacher_name': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING 2024-01-17 00:15:06,531 log Bad Request: /mbschool/teachers/
+INFO 2024-01-17 00:15:06,532 views Input - <QueryDict: {'teacher_name': ['23456'], 'teacher_email': ['*&^%$!$#@example.com']}>
+ERROR 2024-01-17 00:15:06,532 views Name should have characters only
+WARNING 2024-01-17 00:15:06,532 log Not Acceptable: /mbschool/teachers/
+INFO 2024-01-17 00:15:06,534 views Input - <QueryDict: {'teacher_name': ['goga'], 'teacher_email': ['goga@example.com']}>
+INFO 2024-01-17 00:16:53,539 autoreload Watching for file changes with StatReloader
