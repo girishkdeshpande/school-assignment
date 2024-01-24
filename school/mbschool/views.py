@@ -4,12 +4,18 @@ from .serializer import *
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
-from rest_framework.authentication import TokenAuthentication
+from rest_framework.authentication import TokenAuthentication, SessionAuthentication, BasicAuthentication
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.views import Token
-from django.contrib.auth.hashers import make_password
+from rest_framework_simplejwt.authentication import JWTAuthentication
+from rest_framework_simplejwt.tokens import RefreshToken
 
+from .utilities import get_tokens_for_user
+
+from django.contrib.auth.hashers import make_password
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
 
 import re
 import logging
@@ -23,7 +29,8 @@ email_str = r"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
 
 # Student APIs
 class StudentList(APIView):
-    authentication_classes = (TokenAuthentication,)
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
 
     # View all student
     def get(self, request):
@@ -70,7 +77,8 @@ class StudentList(APIView):
 
 
 class StudentDetail(APIView):
-    authentication_classes = (TokenAuthentication,)
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
 
     # View student by id
     def get(self, request, pk):
@@ -159,7 +167,8 @@ class StudentDetail(APIView):
 
 
 class StudentCustom(APIView):
-    authentication_classes = (TokenAuthentication,)
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
 
     # Assign course to student
     def post(self, request):
@@ -189,6 +198,9 @@ class StudentCustom(APIView):
 
 
 class SearchStudent(APIView):
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
+
     def get(self, request):
         logger.info(f'Input - {request.data}')
         try:
@@ -207,7 +219,8 @@ class SearchStudent(APIView):
 
 # Course APIs
 class CourseList(APIView):
-    authentication_classes = (TokenAuthentication,)
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
 
     # View all course
     def get(self, request):
@@ -249,7 +262,8 @@ class CourseList(APIView):
 
 
 class CourseDetail(APIView):
-    authentication_classes = (TokenAuthentication,)
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
 
     # View course by id
     def get(self, request, pk):
@@ -334,6 +348,9 @@ class CourseDetail(APIView):
 
 
 class SearchCourse(APIView):
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
+
     def get(self, request):
         logger.info(f'Input - {request.data}')
         try:
@@ -352,7 +369,8 @@ class SearchCourse(APIView):
 
 # Teacher APIs
 class TeacherList(APIView):
-    authentication_classes = (TokenAuthentication,)
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
 
     # View all teachers
     def get(self, request):
@@ -398,7 +416,8 @@ class TeacherList(APIView):
 
 
 class TeacherDetail(APIView):
-    authentication_classes = (TokenAuthentication,)
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
 
     # View teacher by id
     def get(self, request, pk):
@@ -488,7 +507,8 @@ class TeacherDetail(APIView):
 
 
 class TeacherCustom(APIView):
-    authentication_classes = (TokenAuthentication,)
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
 
     # Assign course to teacher
     def post(self, request):
@@ -518,6 +538,8 @@ class TeacherCustom(APIView):
 
 
 class SearchTeacher(APIView):
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
     def get(self, request):
         logger.info(f'Input - {request.data}')
         try:
@@ -534,12 +556,15 @@ class SearchTeacher(APIView):
             return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
+# User APIs
 class UserList(APIView):
-    authentication_classes = (TokenAuthentication,)
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
 
     # View all users
     def get(self, request):
         try:
+
             user = User.objects.all()
             serializer = UserSerializer(user, many=True)
             return Response({'Users': serializer.data}, status=status.HTTP_200_OK)
@@ -558,9 +583,10 @@ class UserList(APIView):
             serializer = UserSerializer(data=request.data)
             if serializer.is_valid():
                 password = make_password(request.data['password'])
-                serializer.save(password=password)
-                Token.objects.create(user_id=serializer.data['id'])
-                return Response({'Message': serializer.data}, status=status.HTTP_200_OK)
+                user = serializer.save(password=password)
+                token = get_tokens_for_user(user)
+                # Token.objects.create(user_id=serializer.data['id'])
+                return Response({'Token': token, 'Message': serializer.data}, status=status.HTTP_200_OK)
             else:
                 logger.error(f'Error - {serializer.errors}')
                 return Response({'Error': serializer.errors}, status=status.HTTP_200_OK)
@@ -570,6 +596,25 @@ class UserList(APIView):
             return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
+class UserLogin(APIView):
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
 
+    def post(self, request):
+        try:
+            if not request.data['username'] or not request.data['password']:
+                return Response({'Error': 'Login failed'}, status=status.HTTP_400_BAD_REQUEST)
 
+            user = authenticate(username=request.data['username'], password=request.data['password'])
+
+            if user is not None:
+                token = get_tokens_for_user(user)
+                login(request, user)
+                return Response({'Token': token, 'Message': 'Login successful'}, status=status.HTTP_200_OK)
+
+            elif user is None:
+                return Response({'Error': 'Invalid username or password'})
+
+        except Exception as e:
+            return Response({'Error': f'An unexpected error occurred - {e}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 

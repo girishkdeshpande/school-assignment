@@ -44,6 +44,9 @@ class TestStudentList(TestCase):
 
     def test_post_success(self):
         response = self.client.post(self.url, data=self.success_data, format='json')
+        data = response.json()
+        self.assertIn('gogo', data['Student']['student_name'])
+        self.assertIn('student_name', data['Student'])
         self.assertEqual(response.status_code, 201)
 
     def test_post_name_unsuccess(self):

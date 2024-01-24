@@ -67,7 +67,7 @@ class StudentSerializer(serializers.ModelSerializer):
 
 
 class TeacherSerializer(serializers.ModelSerializer):
-    courses = CourseSerializer(many=True, read_only=True)
+    courses = CourseSerializer(many=True, read_only=True, fields=('id', 'course_name', 'course_status', 'students'))
 
     class Meta:
         model = Teacher
@@ -82,4 +82,8 @@ class UserSerializer(serializers.ModelSerializer):
             'write_only': True,
             'required': True
         }}
+
+
+
+
 
